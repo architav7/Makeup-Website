@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.announcement-bar {
+    align-items: center;
+    padding-top: 10px;
+    display: flex;
+    background-color: #f7d8d6;
+    justify-content: space-between;
+}
+
+.free-shipping{
+    padding-bottom: 10px;
+    position: relative;
+    left: 20px;
+}
+
+.first-order{
+    padding-bottom: 10px;
+}
+
+#help-and-track {
+    display: flex;
+    gap: 2rem;
+    padding-bottom: 10px;
+    position: relative;
+    right: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+
+.glamora{
+    text-align: center;
+}
+
+.glamora span {
+    display: block;
+    font-size: 32px;
+    letter-spacing: 3px;
+}
+
+.glamora small {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-bar ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    left: -170px;
+}
+
+.nav-bar li {
+    font-size: 16px;
+    white-space: nowrap;
+    position: relative;
+    left: -100px;
+
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.icons img {
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.background-img {
+    background-image: url(makeup.png);
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.front-text{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.new-collection{
+    position: relative;
+    left: 70px;
+    top: 60px;
+    color: #d04c64;
+}
+
+.makeup-that {
+    position: relative;
+    left: 70px;
+    top: 100px;
+    font-size: 70px;
+}
+
+.empowers-you{
+    position: relative;
+    left: 70px;
+    top: 100px;
+    font-size: 70px;
+    color: #d04c64;
+}
+
+.high-performance{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    left: 72px;
+    top: 120px;
+    
+}
+
+.high-performance span {
+    font-size: 15px;
+
+}
+
+.btns{
+    display: flex;
+    position: relative;
+    top : 150px;
+    left: 72px;
+    height: 10px;
+    gap: 20px;
+}
+
+.first{
+    height: 40px;
+    width: 150px;
+    color: white;
+    background-color: #d04c64;
+    border: none;
+    border-radius: 4px;
+}
+
+.second{
+    border-radius: 4px;
+    height: 40px;
+    width: 195px;
+    background-color: #fbefea;
+}
+
+.dot{
+    display: flex;
+    flex-direction: column;
+}
+
+.firstdot{
+    position:relative;
+    top: 150px; 
+    left: 72px;
+    font-size: 30px;
+}
+
+.tabs {
+    background-color: #f8f2f2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 25px 50px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+    padding: 10px 30px;
+    border-right: 1px solid #ddd;
+    justify-content: flex-start;
+}
+
+.tab:last-child {
+    border-right: none;
+}
+
+.tab img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.tab-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.tab-text span {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.tab-text small {
+    font-size: 13px;
+    color: #555;
+}
+
+.category {
+    text-align: center;
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
+
+
+
+
+
