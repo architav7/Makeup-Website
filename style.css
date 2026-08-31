@@ -583,13 +583,476 @@ hr {
 }
 
 
-@media(max-width-768px){
-    .feature-text{
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+@media(max-width: 768px){
+    /* Announcement Bar */
+    .announcement-bar {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 8px;
     }
-    
-    .about-us{
-        
+
+    .free-shipping {
+        font-size: 12px;
+        left: 0;
+        padding-bottom: 0;
+    }
+
+    .first-order {
+        font-size: 12px;
+        padding-bottom: 0;
+    }
+
+    #help-and-track {
+        gap: 1rem;
+        right: 0;
+        padding-bottom: 0;
+        font-size: 12px;
+    }
+
+    /* Header */
+    .header {
+        padding: 10px 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .glamora span {
+        font-size: 24px;
+        letter-spacing: 2px;
+    }
+
+    .glamora small {
+        font-size: 8px;
+    }
+
+    /* Navigation Bar */
+    .nav-bar {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .nav-bar ul {
+        flex-wrap: wrap;
+        gap: 15px;
+        left: 0;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-bar li {
+        font-size: 14px;
+        left: 0;
+        white-space: normal;
+    }
+
+    .icons {
+        gap: 12px;
+    }
+
+    .icons img {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Background Image Section */
+    .background-img {
+        height: 50vh;
+    }
+
+    .new-collection {
+        font-size: 14px;
+        left: 20px;
+        top: 20px;
+    }
+
+    .makeup-that {
+        font-size: 36px;
+        left: 20px;
+        top: 40px;
+    }
+
+    .empowers-you {
+        font-size: 36px;
+        left: 20px;
+        top: 40px;
+    }
+
+    .high-performance {
+        left: 20px;
+        top: 60px;
+    }
+
+    .high-performance span {
+        font-size: 12px;
+    }
+
+    .btns {
+        left: 20px;
+        top: 80px;
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+    }
+
+    .first, .second {
+        width: 100%;
+        height: 45px;
+    }
+
+    /* Tabs Section */
+    .tabs {
+        flex-direction: column;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .tab {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .tab:last-child {
+        border-bottom: none;
+    }
+
+    .tab img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Category Section */
+    .category {
+        font-size: 18px;
+        padding: 20px 15px;
+    }
+
+    .category-images {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding-top: 15px;
+        padding: 15px;
+    }
+
+    .category-item img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .category-item p {
+        font-size: 12px;
+        margin-top: 8px;
+    }
+
+    /* Best Sellers Section */
+    .best-sellers {
+        font-size: 16px;
+        left: 15px;
+        top: 20px;
+    }
+
+    .best-seller-imgs {
+        flex-wrap: wrap;
+        gap: 30px;
+        padding-top: 40px;
+        padding-right: 15px;
+        padding-left: 15px;
+        justify-content: center;
+    }
+
+    .best-seller-item {
+        width: 140px;
+    }
+
+    .best-seller-item img {
+        width: 140px;
+        height: 160px;
+    }
+
+    .rating span {
+        font-size: 12px;
+    }
+
+    .rating small {
+        font-size: 9px;
+    }
+
+    /* Offers Section */
+    .offers {
+        flex-direction: column;
+        gap: 20px;
+        padding-top: 20px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .first-banner, .second-banner {
+        width: 100%;
+    }
+
+    .first-banner img, .second-banner img {
+        width: 100%;
+        height: auto;
+    }
+
+    .second-banner img {
+        padding-left: 0;
+    }
+
+    /* Newsletter Section */
+    .newsletter {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 15px;
+        gap: 15px;
+    }
+
+    .newsletter-text {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .newsletter-text img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .newsletter-text span {
+        font-size: 14px;
+    }
+
+    .newsletter-text small {
+        font-size: 12px;
+    }
+
+    .email-box {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .subscribe {
+        width: 100%;
+    }
+
+    .subscribe button {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    /* Footer Section */
+    .footer-box {
+        flex-direction: column;
+        padding: 20px 15px;
+        gap: 25px;
+    }
+
+    .brand {
+        width: 100%;
+    }
+
+    .brand-logo {
+        padding-left: 0;
+        font-size: 24px;
+    }
+
+    .brand-logo small {
+        margin-left: 0;
+    }
+
+    .brand-description {
+        padding-left: 0;
+        font-size: 12px;
+    }
+
+    .social-icons img {
+        padding-left: 0;
+        width: 100%;
+    }
+
+    .shop, .customer-care, .about-us {
+        width: 100%;
+        margin-top: 15px;
+        border-right: none;
+        margin-left: 0;
+        padding-right: 0;
+    }
+
+    .shop h3, .customer-care h3, .about-us h3 {
+        font-size: 14px;
+    }
+
+    .shop ul, .customer-care ul, .about-us ul {
+        margin-top: 10px;
+    }
+
+    .shop li, .customer-care li, .about-us li {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .features {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .features img {
+        width: 100%;
+        height: auto;
+        margin-top: 0;
+    }
+
+    .feature-text {
+        gap: 10px;
+        margin-top: 0;
+    }
+
+    .feature-text strong {
+        font-size: 12px;
+    }
+
+    .feature-text small {
+        font-size: 11px;
+    }
+
+    /* Last Footer */
+    .last-footer {
+        flex-direction: column;
+        height: auto;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .copyright {
+        font-size: 11px;
+    }
+
+    .payment-methods img {
+        width: 150px;
+        height: auto;
+    }
+}
+
+@media(max-width: 480px){
+    /* Extra small screens */
+    .announcement-bar {
+        padding-top: 6px;
+        gap: 8px;
+    }
+
+    .free-shipping, .first-order, #help-and-track {
+        font-size: 10px;
+    }
+
+    .header {
+        padding: 8px 10px;
+        gap: 10px;
+    }
+
+    .glamora span {
+        font-size: 18px;
+    }
+
+    .glamora small {
+        font-size: 7px;
+    }
+
+    .nav-bar ul {
+        gap: 10px;
+    }
+
+    .nav-bar li {
+        font-size: 12px;
+    }
+
+    .background-img {
+        height: 40vh;
+    }
+
+    .new-collection {
+        font-size: 12px;
+        left: 15px;
+        top: 15px;
+    }
+
+    .makeup-that, .empowers-you {
+        font-size: 24px;
+        left: 15px;
+        top: 28px;
+    }
+
+    .high-performance {
+        left: 15px;
+        top: 45px;
+    }
+
+    .high-performance span {
+        font-size: 11px;
+    }
+
+    .btns {
+        left: 15px;
+        top: 65px;
+    }
+
+    .category-images {
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .category-item img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .category-item p {
+        font-size: 11px;
+    }
+
+    .best-seller-imgs {
+        gap: 20px;
+        padding: 10px;
+    }
+
+    .best-seller-item {
+        width: 110px;
+    }
+
+    .best-seller-item img {
+        width: 110px;
+        height: 130px;
+    }
+
+    .offers {
+        padding: 15px 10px;
+    }
+
+    .newsletter {
+        padding: 15px 10px;
+        gap: 12px;
+    }
+
+    .footer-box {
+        padding: 15px 10px;
+        gap: 20px;
+    }
+
+    .last-footer {
+        padding: 10px;
+    }
+
+    .copyright {
+        font-size: 10px;
+    }
+
+    .payment-methods img {
+        width: 120px;
     }
 }
 
