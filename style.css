@@ -603,22 +603,59 @@ hr {
     ========================= */
 
     .announcement-bar {
-        height: 38px;
-        padding: 0 10px;
-        font-size: 8px;
-        line-height: 1.2;
+        height: 45px;
+        overflow: hidden;
+        position: relative;
         display: flex;
         align-items: center;
-        justify-content: center;
     }
 
-    .announcement-bar > div {
-        display: none;
+    .free-shipping {
+        white-space: nowrap;
+        font-size: 9px;
+        flex-shrink: 0;
+        animation: moveShipping 8s linear infinite;
     }
 
-    .announcement-bar .free-shipping {
-        display: block;
-        text-align: center;
+    .first-order {
+        white-space: nowrap;
+        font-size: 9px;
+        flex-shrink: 0;
+        animation: moveOrder 8s linear infinite;
+    }
+
+    #help-and-track {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        flex-shrink: 0;
+        margin-left: 15px;
+    }
+
+    .help,
+    .track {
+        white-space: nowrap;
+        font-size: 9px;
+    }
+
+    @keyframes moveShipping {
+        from {
+            transform: translateX(100%);
+        }
+
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    @keyframes moveOrder {
+        from {
+            transform: translateX(100%);
+        }
+
+        to {
+            transform: translateX(-100%);
+        }
     }
 
 
