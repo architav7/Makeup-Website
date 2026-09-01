@@ -603,49 +603,89 @@ hr {
     ========================= */
 
 
-.announcement-bar {
-    height: 50px;
-    overflow: hidden;
+    .announcement-bar {
+    height: 55px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 28px 27px;
     align-items: center;
-    text-align: center;
-    gap: 0 10px;
-    padding: 4px 10px;
-    font-size: 9px;
+    padding: 0 10px;
+    overflow: hidden;
 }
 
+/* FIRST ROW - LEFT */
 .free-shipping {
     grid-column: 1;
     grid-row: 1;
+
+    width: 100%;
+    overflow: hidden;
     white-space: nowrap;
+
+    font-size: 8px;
+    text-align: left;
+
+    animation: shippingMove 7s linear infinite;
 }
 
+/* FIRST ROW - RIGHT */
 .first-order {
     grid-column: 2;
     grid-row: 1;
+
+    width: 100%;
+    overflow: hidden;
     white-space: nowrap;
+
+    font-size: 8px;
+    text-align: right;
+
+    animation: orderMove 7s linear infinite;
 }
 
+/* SECOND ROW */
 #help-and-track {
     grid-column: 1 / 3;
     grid-row: 2;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 35px;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
 }
 
-.help,
-.track {
+.help {
+    text-align: left;
     white-space: nowrap;
     font-size: 9px;
 }
 
+.track {
+    text-align: right;
+    white-space: nowrap;
+    font-size: 9px;
+}
+
+
+/* MARQUEE */
+@keyframes shippingMove {
+    0% {
+        text-indent: 100%;
+    }
+
+    100% {
+        text-indent: -100%;
+    }
+}
+
+@keyframes orderMove {
+    0% {
+        text-indent: 100%;
+    }
+
+    100% {
+        text-indent: -100%;
+    }
+}
 
     /* =========================
        HEADER
