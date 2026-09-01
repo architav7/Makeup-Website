@@ -664,7 +664,8 @@ hr {
         white-space: nowrap;
         font-size: 9px !important;
         position: relative;
-        left: 25px;
+        left: auto !important;
+        margin-right: 35px;
     }
 
     /* MARQUEE */
