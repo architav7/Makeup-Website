@@ -654,6 +654,11 @@ hr {
         box-sizing: border-box;
     }
 
+    .track {
+    position: relative;
+    right: -70px;
+    }
+
     .help,
     .track {
         white-space: nowrap;
