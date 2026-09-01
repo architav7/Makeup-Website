@@ -654,16 +654,17 @@ hr {
         box-sizing: border-box;
     }
 
-    .track {
-        white-space: nowrap;
-        font-size: 9px;
-        margin-right: 33px;
-    }
-
     .help,
     .track {
         white-space: nowrap;
         font-size: 9px !important;
+    }
+
+    .track {
+        white-space: nowrap;
+        font-size: 9px !important;
+        position: relative;
+        left: 25px;
     }
 
     /* MARQUEE */
