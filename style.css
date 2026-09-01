@@ -603,159 +603,77 @@ hr {
     ========================= */
 
 
-    .announcement-bar {
-    height: 55px;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 28px 27px;
-
-    align-items: center;
-
-    padding: 0 12px;
-    box-sizing: border-box;
-
-    overflow: hidden;
-}
-
-
-/* =========================
-   FREE SHIPPING - LEFT
-========================= */
-
-.free-shipping {
-    grid-column: 1;
-    grid-row: 1;
-
-    width: 100%;
-    overflow: hidden;
-
-    white-space: nowrap;
-    font-size: 9px;
-    text-align: left;
-
-    animation: shippingMove 9s linear infinite;
-}
-
-
-/* =========================
-   FIRST ORDER - RIGHT
-========================= */
-
-.first-order {
-    grid-column: 2;
-    grid-row: 1;
-
-    width: 100%;
-    overflow: hidden;
-
-    white-space: nowrap;
-    font-size: 9px;
-    text-align: right;
-
-    animation: orderMove 9s linear infinite;
-}
-
-
-/* =========================
-   HELP + TRACK
-========================= */
-
-#help-and-track {
-    grid-column: 1 / 3;
-    grid-row: 2;
-
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    width: 100%;
-}
-
-
-/* HELP - LEFT */
-
-.help {
-    width: 100%;
-    overflow: hidden;
-
-    text-align: left;
-    white-space: nowrap;
-
-    font-size: 12px;
-
-    animation: helpMove 7s linear infinite;
-}
-
-
-/* TRACK - RIGHT */
-
-.track {
-    width: 100%;
-    overflow: hidden;
-
-    text-align: right;
-    white-space: nowrap;
-
-    font-size: 12px;
-
-    animation: trackMove 7s linear infinite;
-}
-
-
-/* =========================
-   MARQUEE ANIMATIONS
-========================= */
-
-@keyframes shippingMove {
-
-    0% {
-        transform: translateX(100%);
+     .announcement-bar {
+        height: 50px;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 25px 25px;
+        align-items: center;
+        padding: 0 8px;
+        box-sizing: border-box;
     }
 
-    100% {
-        transform: translateX(-100%);
+    /* FIRST ROW */
+
+    .free-shipping {
+        grid-column: 1;
+        grid-row: 1;
+        white-space: nowrap;
+        font-size: 9px;
+        animation: moveShipping 10s linear infinite;
     }
 
-}
-
-
-@keyframes orderMove {
-
-    0% {
-        transform: translateX(100%);
+    .first-order {
+        grid-column: 2;
+        grid-row: 1;
+        white-space: nowrap;
+        font-size: 9px;
+        animation: moveOrder 10s linear infinite;
     }
 
-    100% {
-        transform: translateX(-100%);
+    /* SECOND ROW */
+
+    #help-and-track {
+        grid-column: 1 / 3;
+        grid-row: 2;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+        padding: 0 10px;
+        box-sizing: border-box;
     }
 
-}
-
-
-@keyframes helpMove {
-
-    0% {
-        transform: translateX(100%);
+    .help,
+    .track {
+        white-space: nowrap;
+        font-size: 9px;
     }
 
-    100% {
-        transform: translateX(-100%);
+    /* MARQUEE */
+
+    @keyframes moveShipping {
+        from {
+            transform: translateX(100%);
+        }
+
+        to {
+            transform: translateX(-100%);
+        }
     }
 
-}
+    @keyframes moveOrder {
+        from {
+            transform: translateX(100%);
+        }
 
-
-@keyframes trackMove {
-
-    0% {
-        transform: translateX(100%);
-    }
-
-    100% {
-        transform: translateX(-100%);
-    }
-
-}
+        to {
+            transform: translateX(-100%);
+        }
+    }   
 
     /* =========================
        HEADER
