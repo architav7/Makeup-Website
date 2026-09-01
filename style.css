@@ -661,12 +661,10 @@ hr {
     }
 
     .track {
-        white-space: nowrap;
-        font-size: 9px !important;
-        position: relative;
-        left: auto !important;
-        margin-right: 38px;
-    }
+    white-space: nowrap;
+    font-size: 9px !important;
+    padding-right: 20px;
+}
 
     /* MARQUEE */
     @keyframes moveShipping {
