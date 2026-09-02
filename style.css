@@ -902,13 +902,15 @@ hr {
 
         justify-content: flex-start !important;
 
-        overflow-x: auto;
+        overflow-x: hidden;
 
         gap: 15px;
 
         padding: 18px 18px 20px !important;
 
         scrollbar-width: none;
+
+        animation: categoryMarquee 12s linear infinite;
     }
 
     .category-images::-webkit-scrollbar {
@@ -916,16 +918,18 @@ hr {
     }
 
     .category-item {
-        flex: 0 0 100px !important;
-        width: 100px !important;
+         flex: 0 0 115px !important; 
+    width: 115px !important; 
+       
         margin: 0 !important;
 
         text-align: center;
     }
 
     .category-item img {
-        width: 100px !important;
-        height: 100px !important;
+         width: 115px !important; 
+    height: 115px !important; 
+        
 
         border-radius: 50%;
         object-fit: cover;
@@ -936,6 +940,15 @@ hr {
         font-size: 9px;
         white-space: nowrap;
     }
+
+    @keyframes categoryMarquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
 
 
     /* =========================
