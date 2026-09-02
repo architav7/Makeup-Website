@@ -813,22 +813,33 @@ hr {
        FEATURE TABS
     ========================= */
 
+    /* TABS */
     .tabs {
         width: 100%;
+        margin-top: -300px !important;
+
         display: flex;
-        justify-content: space-around;
         align-items: center;
-        padding: 18px 5px !important;
-        gap: 3px;
+
+        padding: 15px 5px !important;
+        gap: 0;
+        overflow: hidden;
+        box-sizing: border-box;
     }
 
     .tab {
-        flex: 1;
+        flex: 0 0 25%;
+        min-width: 25%;
+
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 4px;
+        gap: 3px;
+
         border-right: 1px solid #ddd;
+        box-sizing: border-box;
+
+        animation: tabMove 8s linear infinite;
     }
 
     .tab:last-child {
@@ -836,24 +847,32 @@ hr {
     }
 
     .tab img {
-        width: 18px;
-        height: 18px;
-    }
-
-    .tab-text {
-        font-size: 7px !important;
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
     }
 
     .tab-text h3 {
-        font-size: 9px !important;
-        line-height: 1.1;
+        font-size: 7px !important;
+        line-height: 1.1 !important;
+        margin: 0;
     }
 
     .tab-text p {
-        font-size: 6px !important;
-        line-height: 1.2;
+        font-size: 5px !important;
+        line-height: 1.2 !important;
+        margin: 3px 0 0;
     }
 
+    @keyframes tabMove {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-100%);
+        }
+    }
 
     /* =========================
        SHOP BY CATEGORY
