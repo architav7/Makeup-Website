@@ -626,7 +626,8 @@ hr {
         font-size: 9px;
 
         animation: moveShipping 9s linear infinite;
-        transform: translateY(3px);
+        position: relative;
+        top: 3px;
     }
 
     /* SECOND ROW */
@@ -785,8 +786,8 @@ hr {
     }
 
     .high-performance span {
-    font-size: 7px !important;
-}
+        font-size: 7px !important;
+    }
 
     /* BUTTONS */
     .btns {
