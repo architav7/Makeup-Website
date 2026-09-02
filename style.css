@@ -796,10 +796,10 @@ hr {
         gap: 6px;
     }
 
-    .first,
+.first,
 .second {
-    width: 75px;
-    height: 25px;
+    width: 70px;
+    height: 24px;
     font-size: 7px;
 }
 
