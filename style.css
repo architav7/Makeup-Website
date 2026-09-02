@@ -815,66 +815,67 @@ hr {
 
     /* TABS */
     .tabs {
-    width: 100%;
-    margin-top: -443px !important;
+        width: 100%;
+        margin-top: -443px !important;
 
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 35px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 35px;
 
-    padding: 0 !important;
-    gap: 0;
+        padding: 0 !important;
+        gap: 0;
 
-    overflow: hidden;
-    box-sizing: border-box;
-}
+        overflow: hidden;
+        box-sizing: border-box;
+    }
 
-.tab {
-    width: 100%;
-    height: 35px;
-    min-width: 0;
+    .tab {
+        width: 100%;
+        height: 35px;
+        min-width: 0;
 
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 2px;
 
-    padding: 0 5px !important;
+        padding: 0 5px !important;
 
-    border-right: 1px solid #ddd;
-    box-sizing: border-box;
-}
+        border-right: 1px solid #ddd;
+        box-sizing: border-box;
+    }
 
-.tab:nth-child(2n) {
-    border-right: 1px solid #ddd;
-}
+    .tab:nth-child(2n) {
+        border-right: 1px solid #ddd;
+    }
 
-.tab:last-child {
-    border-right: none;
-}
+    .tab:last-child {
+        border-right: none;
+    }
 
-.tab img {
-    width: 14px;
-    height: 14px;
-    flex-shrink: 0;
-}
+    .tab img {
+        width: 14px;
+        height: 14px;
+        flex-shrink: 0;
+    }
 
-.tabs .tab .tab-text {
-    zoom: 0.4;
-    min-width: 0;
-}
+    .tabs .tab .tab-text {
+        zoom: 0.4;
+        min-width: 0;
+    }
 
-.tabs .tab .tab-text h3 {
-    margin: 0 !important;
-    line-height: 1 !important;
-    white-space: nowrap;
-}
+    .tabs .tab .tab-text h3 {
+        margin: 0 !important;
+        line-height: 1 !important;
+        white-space: nowrap;
+    }
 
-.tabs .tab .tab-text p {
-    margin: 1px 0 0 !important;
-    line-height: 1 !important;
-    white-space: nowrap;
-}
+    .tabs .tab .tab-text p {
+        margin: 1px 0 0 !important;
+        line-height: 1 !important;
+        white-space: nowrap;
+    }
+
     /* =========================
        SHOP BY CATEGORY
     ========================= */
@@ -883,6 +884,9 @@ hr {
         width: 100%;
         padding: 25px 0 5px !important;
         text-align: center;
+
+        position: relative;
+        top: -20px;
     }
 
     .category p {
