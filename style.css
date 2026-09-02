@@ -803,6 +803,12 @@ hr {
     font-size: 7px;
 }
 
+.second {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
     /* =========================
        FEATURE TABS
     ========================= */
