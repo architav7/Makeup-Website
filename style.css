@@ -919,7 +919,7 @@ hr {
 
     text-align: center;
 
-    animation: categoryMarquee 18s linear infinite;
+    animation: categoryMarquee 8s linear infinite !important;
 }
 
 .category-item img {
