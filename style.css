@@ -850,9 +850,8 @@ hr {
 }
 
 .tab img {
-    width: 9px;
-    height: 9px;
-    flex-shrink: 0;
+     width: 14px;
+    height: 14px;
 }
 
 .tab-text h3 {
@@ -862,7 +861,7 @@ hr {
 }
 
 .tab-text p {
-    font-size: 3.5px !important;
+     font-size: 3px !important;
     line-height: 1 !important;
     margin: 1px 0 0;
 }
