@@ -749,8 +749,11 @@ hr {
     }
 
     .new-collection {
+        position: absolute !important;
+        left: 22px !important;
+        top: 35px !important;
+        margin: 0 !important;
         font-size: 9px !important;
-        margin-bottom: 8px;
     }
 
     .makeup-that,
