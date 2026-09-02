@@ -894,7 +894,7 @@ hr {
         font-weight: bold;
     }
 
-   .category-images {
+ .category-images {
     width: 100%;
 
     display: flex !important;
@@ -914,12 +914,12 @@ hr {
 }
 
 @keyframes categoryMarquee {
-    from {
+    0% {
         transform: translateX(0);
     }
 
-    to {
-        transform: translateX(-120px);
+    100% {
+        transform: translateX(-100px);
     }
 }
 
