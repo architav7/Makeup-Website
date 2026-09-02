@@ -861,15 +861,15 @@ hr {
 }
 
 .tab-text h3 {
-    font-size: 2px !important;
+    font-size: 4px !important;
     line-height: 1 !important;
     margin: 0;
 }
 
 .tab-text p {
-    font-size: 1px !important;
+    font-size: 2.5px !important;
     line-height: 1 !important;
-    margin: 1px 0 0;
+    margin: 0;
 }
 
 
