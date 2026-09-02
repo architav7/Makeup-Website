@@ -820,9 +820,9 @@ hr {
 
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
+    grid-template-rows: 32px 32px;
 
-    padding: 2px 5px !important;
+    padding: 0 !important;
     gap: 0;
 
     overflow: hidden;
@@ -831,18 +831,18 @@ hr {
 
 .tab {
     width: 100%;
+    height: 32px;
     min-width: 0;
 
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    gap: 3px;
+    gap: 4px;
 
-    padding: 2px 25px;
+    padding: 0 25px !important;
 
     border-right: 1px solid #ddd;
     box-sizing: border-box;
-
 }
 
 .tab:nth-child(2n) {
@@ -861,17 +861,18 @@ hr {
 }
 
 .tabs .tab .tab-text h3 {
-    font-size: 3px !important;
+    font-size: 5px !important;
     line-height: 1 !important;
     margin: 0 !important;
+    white-space: nowrap;
 }
 
 .tabs .tab .tab-text p {
-    font-size: 2px !important;
+    font-size: 4px !important;
     line-height: 1 !important;
     margin: 0 !important;
+    white-space: nowrap;
 }
-
 
     /* =========================
        SHOP BY CATEGORY
