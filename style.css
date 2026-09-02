@@ -861,16 +861,16 @@ hr {
 }
 
 .tab-text h3 {
-    font-size: 3px !important;
-    line-height: 1 !important;
+    font-size: 8px !important;
+    transform: scale(0.5);
+    transform-origin: left center;
 }
 
 .tab-text p {
-    font-size: 2px !important;
-    line-height: 1 !important;
-    margin: 0;
+    font-size: 7px !important;
+    transform: scale(0.5);
+    transform-origin: left center;
 }
-
     /* =========================
        SHOP BY CATEGORY
     ========================= */
