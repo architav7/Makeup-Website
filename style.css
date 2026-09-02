@@ -757,13 +757,22 @@ hr {
     }
 
     .makeup-that,
-    .empowers-you {
-        position: static !important;
-        font-size: 24px !important;
-        line-height: 1.05 !important;
-        letter-spacing: -0.5px;
-        margin: 0 !important;
-    }
+.empowers-you {
+    position: absolute !important;
+    left: 22px !important;
+    font-size: 18px !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.3px;
+    margin: 0 !important;
+}
+
+.makeup-that {
+    top: 65px !important;
+}
+
+.empowers-you {
+    top: 86px !important;
+}
 
     /* DESCRIPTION */
     .high-performance {
