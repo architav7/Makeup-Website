@@ -843,7 +843,6 @@ hr {
     border-right: 1px solid #ddd;
     box-sizing: border-box;
 
-    animation: tabMarquee 6s linear infinite;
 }
 
 .tab:nth-child(2n) {
@@ -862,26 +861,18 @@ hr {
 }
 
 .tab-text h3 {
-    font-size: 4px !important;
+    font-size: 2px !important;
     line-height: 1 !important;
     margin: 0;
 }
 
 .tab-text p {
-    font-size: 2.5px !important;
+    font-size: 1px !important;
     line-height: 1 !important;
     margin: 1px 0 0;
 }
 
-@keyframes tabMarquee {
-    from {
-        transform: translateX(0);
-    }
 
-    to {
-        transform: translateX(-30px);
-    }
-}
     /* =========================
        SHOP BY CATEGORY
     ========================= */
