@@ -757,31 +757,31 @@ hr {
     }
 
     .makeup-that,
-.empowers-you {
-    position: absolute !important;
-    left: 22px !important;
-    font-size: 18px !important;
-    line-height: 1.1 !important;
-    letter-spacing: -0.3px;
-    margin: 0 !important;
-}
+    .empowers-you {
+        position: absolute !important;
+        left: 22px !important;
+        font-size: 18px !important;
+        line-height: 1.1 !important;
+        letter-spacing: -0.3px;
+        margin: 0 !important;
+    }
 
-.makeup-that {
-    top: 50px !important;
-}
+    .makeup-that {
+        top: 50px !important;
+    }
 
-.empowers-you {
-    top: 70px !important;
-}
+    .empowers-you {
+        top: 70px !important;
+    }
 
     /* DESCRIPTION */
     .high-performance {
-    position: absolute !important;
-    left: 22px !important;
-    top: 110px !important;
-    font-size: 9px !important;
-    line-height: 1.3 !important;
-}
+        position: absolute !important;
+        left: 22px !important;
+        font-size: 7px !important;
+        top: 100px !important;
+        line-height: 1.3 !important;
+    }
 
     /* BUTTONS */
     .btns {
