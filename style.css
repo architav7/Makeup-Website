@@ -816,7 +816,7 @@ hr {
     /* TABS */
     .tabs {
         width: 100%;
-        margin-top: -440px !important;
+        margin-top: -442px !important;
 
         display: flex;
         align-items: center;
