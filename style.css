@@ -661,10 +661,10 @@ hr {
     }
 
     .track {
-    white-space: nowrap;
-    font-size: 9px !important;
-    transform: translateX(40px);
-}
+        white-space: nowrap;
+        font-size: 9px !important;
+        transform: translateX(40px);
+    }
 
     /* MARQUEE */
     @keyframes moveShipping {
@@ -733,20 +733,21 @@ hr {
         width: 100%;
         height: 560px !important;
 
-        background-size: 100% auto !important;
-        background-position: top center !important;
+        background-size: cover !important;
+        background-position: center !important;
         background-repeat: no-repeat;
 
         position: relative;
-        background-color: #fbefea;
     }
 
+
+    /* TEXT */
     .front-text {
         position: absolute !important;
 
         left: 22px !important;
-        right: 22px !important;
-        top: 225px !important;
+        top: 35px !important;
+        right: auto !important;
 
         margin: 0 !important;
         padding: 0 !important;
@@ -758,32 +759,47 @@ hr {
 
     .new-collection {
         position: static !important;
+        font-size: 11px !important;
         margin-bottom: 12px;
-        font-size: 12px;
     }
 
     .makeup-that,
     .empowers-you {
         position: static !important;
 
-        font-size: 38px !important;
-        line-height: 1.05;
+        font-size: 36px !important;
+        line-height: 1.05 !important;
         letter-spacing: -1px;
     }
 
-    .front-text p {
-        margin-top: 15px;
-        font-size: 11px;
-        line-height: 1.4;
+    .empowers-you {
+        margin-top: 2px;
     }
 
+
+    /* DESCRIPTION */
+    .high-performance {
+        position: absolute !important;
+
+        left: 22px !important;
+        top: 185px !important;
+
+        font-size: 11px !important;
+        line-height: 1.35 !important;
+    }
+
+
+    /* BUTTONS */
     .btns {
-        position: static !important;
+        position: absolute !important;
+
+        left: 22px !important;
+        top: 235px !important;
 
         display: flex;
         gap: 10px;
 
-        margin-top: 20px;
+        margin: 0 !important;
         height: auto !important;
     }
 
