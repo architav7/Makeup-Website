@@ -734,88 +734,60 @@ hr {
         width: 100%;
         height: 560px !important;
 
-        background-size: 100% 100% !important;
-        background-position: center !important;
+        background-size: 85% auto !important;
+        background-position: top right !important;
         background-repeat: no-repeat;
 
         position: relative;
     }
 
 
-    /* HERO TEXT */
+    /* TEXT */
     .front-text {
-        position: absolute !important;
-
-        left: 5% !important;
-        right: auto !important;
-        top: 10% !important;
-
-        margin: 0 !important;
-        padding: 0 !important;
-
-        display: flex;
-        flex-direction: column;
-        gap: 0;
+        left: 22px !important;
+        top: 180px !important;
     }
 
     .new-collection {
-        position: static !important;
-
-        font-size: 10px !important;
-        margin-bottom: 10px;
+        font-size: 9px !important;
+        margin-bottom: 8px;
     }
 
     .makeup-that,
     .empowers-you {
-        position: static !important;
-
-        font-size: 30px !important;
+        font-size: 27px !important;
         line-height: 1.05 !important;
         letter-spacing: -1px;
-    }
-
-    .empowers-you {
-        margin-top: 2px;
     }
 
 
     /* DESCRIPTION */
     .high-performance {
-        position: absolute !important;
+        left: 22px !important;
+        top: 330px !important;
 
-        left: 5% !important;
-        top: 40% !important;
-
-        font-size: 10px !important;
-        line-height: 1.35 !important;
+        font-size: 9px !important;
     }
 
 
     /* BUTTONS */
     .btns {
-        position: absolute !important;
+        left: 22px !important;
+        top: 365px !important;
 
-        left: 5% !important;
-        top: 49% !important;
-
-        display: flex;
-        gap: 8px;
-
-        margin: 0 !important;
-        padding: 0 !important;
-        height: auto !important;
+        gap: 6px;
     }
 
     .first {
-        width: 105px;
-        height: 36px;
-        font-size: 9px;
+        width: 90px;
+        height: 32px;
+        font-size: 8px;
     }
 
     .second {
-        width: 135px;
-        height: 36px;
-        font-size: 9px;
+        width: 115px;
+        height: 32px;
+        font-size: 8px;
     }
 
     /* =========================
