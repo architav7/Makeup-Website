@@ -861,17 +861,19 @@ hr {
 }
 
 .tabs .tab .tab-text h3 {
-    font-size: 3px !important;
+    font-size: 12px !important;
+    transform: scale(0.5);
+    transform-origin: left center;
     line-height: 1 !important;
     margin: 0 !important;
-    white-space: nowrap;
 }
 
 .tabs .tab .tab-text p {
-    font-size: 2px !important;
+    font-size: 10px !important;
+    transform: scale(0.5);
+    transform-origin: left center;
     line-height: 1 !important;
     margin: 0 !important;
-    white-space: nowrap;
 }
 
     /* =========================
