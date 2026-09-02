@@ -792,16 +792,16 @@ hr {
     /* BUTTONS */
     .btns {
         left: 22px !important;
-        top: 100px !important;
+        top: 115px !important;
         gap: 6px;
     }
 
     .first,
-    .second {
-        width: 90px;
-        height: 28px;
-        font-size: 7px;
-    }
+.second {
+    width: 75px;
+    height: 25px;
+    font-size: 7px;
+}
 
     /* =========================
        FEATURE TABS
