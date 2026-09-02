@@ -804,7 +804,7 @@ hr {
 }
 
 .second {
-    border: none !important;
+     border: 1px solid black !important;
     outline: none !important;
     box-shadow: none !important;
 }
