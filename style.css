@@ -732,10 +732,10 @@ hr {
 
     .background-img {
         width: 100%;
-        height: 560px !important;
+        height: 600px !important;
 
-        background-size: 85% auto !important;
-        background-position: top right !important;
+        background-size: 100% auto !important;
+        background-position: top center !important;
         background-repeat: no-repeat;
 
         position: relative;
