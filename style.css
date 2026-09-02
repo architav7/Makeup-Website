@@ -860,20 +860,20 @@ hr {
     flex-shrink: 0;
 }
 
+.tabs .tab .tab-text {
+    zoom: 0.4;
+}
+
 .tabs .tab .tab-text h3 {
-    font-size: 12px !important;
-    transform: scale(0.5);
-    transform-origin: left center;
-    line-height: 1 !important;
     margin: 0 !important;
+    line-height: 1 !important;
+    white-space: nowrap;
 }
 
 .tabs .tab .tab-text p {
-    font-size: 10px !important;
-    transform: scale(0.5);
-    transform-origin: left center;
+    margin: 1px 0 0 !important;
     line-height: 1 !important;
-    margin: 0 !important;
+    white-space: nowrap;
 }
 
     /* =========================
