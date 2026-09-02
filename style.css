@@ -626,6 +626,7 @@ hr {
         font-size: 9px;
 
         animation: moveShipping 9s linear infinite;
+        transform: translateY(3px);
     }
 
     /* SECOND ROW */
