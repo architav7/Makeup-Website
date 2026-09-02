@@ -758,11 +758,11 @@ hr {
 
     .makeup-that,
     .empowers-you {
-        font-size: 27px !important;
+        position: static !important;
+        font-size: 28px !important;
         line-height: 1.05 !important;
         letter-spacing: -1px;
     }
-
 
     /* DESCRIPTION */
     .high-performance {
