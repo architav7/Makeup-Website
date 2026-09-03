@@ -851,6 +851,16 @@ hr {
     ========================= */
 
     /* TABS */
+
+    .tab {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    flex: 1;
+    min-width: 0;
+    justify-content: center; /* This centers everything inside the gray boxes */
+}
+
 .tabs {
     width: 100%;
     position: relative;
@@ -859,20 +869,12 @@ hr {
     justify-content: space-between;
     align-items: center;
     background-color: #ffffff;
-    padding: 12px 10px; /* 1. Balanced padding to contain everything inside */
-    margin-left: 0;     /* Remove the negative margin entirely */
+    padding: 12px 10px; /* Gives padding inside the screen edges */
+    margin-left: 0;     /* Keeps the container centered on screen */
     box-sizing: border-box;
     gap: 4px;
 }
 
-.tab {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    flex: 1;
-    min-width: 0;
-    justify-content: center; /* 2. Centers content cleanly within the grey borders */
-}
 
 .tab:not(:last-child) {
     border-right: 1px solid #ddd;
