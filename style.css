@@ -776,15 +776,19 @@ hr {
     background-position: right 20% !important;
     background-repeat: no-repeat;
     position: relative;
-    /* This creates the necessary blank space directly beneath the image layout */
-    margin-bottom: 220px !important; 
+    
+    /* ADD THESE LINES TO FORCE FLEX LAYOUT DOWNWARDS */
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-end !important; /* Pushes the start of the layout down */
+    margin-bottom: 250px !important; /* Makes room below the image frame */
 }
 
 /* TEXT CONTAINER */
 
 /* TEXT CONTAINER */
 .front-text {
-    position: relative !important; /* Removed absolute coordinates */
+    position: relative !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: flex-start !important;
@@ -792,6 +796,9 @@ hr {
     padding: 20px 20px 0 20px !important;
     background-color: #ffffff;
     top: auto !important;
+    
+    /* ADD THIS LINE */
+    margin-top: 55vh !important; /* Pushes the entire block right below the background picture */
 }
 
 .new-collection {
