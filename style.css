@@ -781,61 +781,49 @@ hr {
 }
 
 /* TEXT CONTAINER */
+
+/* TEXT CONTAINER */
 .front-text {
-    position: absolute !important;
-    top: 100% !important; /* Starts precisely where the background image ends */
-    left: 0 !important;
-    width: 100%;
-    text-align: center;
-    padding-top: 15px;
+    position: relative !important; /* Removed absolute coordinates */
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    text-align: left !important;
+    padding: 20px 20px 0 20px !important;
     background-color: #ffffff;
-    margin-top: 0 !important; /* Clears out the broken gap margin */
-    transform: none !important; /* Clears out the broken gap translate */
+    top: auto !important;
 }
 
 .new-collection {
     position: relative !important;
-    left: 20px !important;
-    top: 0 !important;
     margin: 0 0 10px 0 !important;
     font-size: 13px !important;
     letter-spacing: 1.5px;
-    text-align: left !important;
 }
 
 .makeup-that,
 .empowers-you {
     position: relative !important;
-    left: 20px !important;
-    font-size: 42px !important; /* Made the font much larger */
+    font-size: 42px !important; 
     line-height: 1.1 !important;
     letter-spacing: -0.8px;
     margin: 0 !important;
     display: block;
-    text-align: left !important;
-}
-
-.makeup-that {
-    top: 0 !important;
 }
 
 .empowers-you {
-    top: 0 !important;
     margin-top: 4px !important;
-    margin-bottom: 12px !important;
 }
 
 /* DESCRIPTION */
 .high-performance {
-    position: absolute !important;
-    top: calc(100% + 155px) !important; /* Increased space to fit the huge text */
-    left: 20px !important;
-    width: calc(100% - 40px);
+    position: relative !important; /* Forces flow layout instead of overlapping */
+    width: auto !important;
+    margin: 15px 20px !important; /* Matches side paddings */
     line-height: 1.4 !important;
     text-align: left !important;
     background-color: #ffffff;
-    margin-bottom: 0 !important;
-    transform: none !important;
+    top: auto !important;
 }
 
 .high-performance span {
@@ -846,22 +834,20 @@ hr {
 
 /* BUTTONS */
 .btns {
-    position: absolute !important;
-    top: calc(100% + 220px) !important; /* Pushed buttons down to clear the description */
-    left: 20px !important;
-    width: calc(100% - 40px);
-    display: flex;
-    justify-content: flex-start;
+    position: relative !important; /* Snaps perfectly below the description */
+    width: auto !important;
+    margin: 0 20px 25px 20px !important;
+    display: flex !important;
+    justify-content: flex-start !important;
     gap: 12px;
     background-color: #ffffff;
-    padding-bottom: 25px; 
-    transform: none !important;
+    top: auto !important;
 }
 
 .first,
 .second {
-    width: 150px; /* Made buttons slightly larger to look balanced with the text */
-    height: 40px; /* Made buttons taller */
+    width: 150px; 
+    height: 40px; 
     font-size: 10px;
     font-weight: bold;
     letter-spacing: 0.5px;
