@@ -723,10 +723,13 @@ hr {
     position: absolute;
     width: 100%;
     left: 0;
+    right: 0;
     top: 50%;
     transform: translateY(-50%);
     pointer-events: none;
+    box-sizing: border-box;
 }
+
 
 .nav-bar ul {
     display: none;
@@ -734,9 +737,10 @@ hr {
 
 .icons {
     display: flex;
+    justify-content: space-between;
     padding: 0 18px;
     box-sizing: border-box;
-    align-items: center;
+    width: 100%;
     pointer-events: auto;
 }
 
