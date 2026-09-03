@@ -754,8 +754,8 @@ hr {
         width: 22px;
         height: 22px;
         position: relative;
-        top: -3px;
-        color: #a9133b;
+        top: -6px;
+        filter: brightness(0) saturate(100%) invert(17%) sepia(57%) saturate(3500%) hue-rotate(330deg) brightness(85%);
     }
 
 
