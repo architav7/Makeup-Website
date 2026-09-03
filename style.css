@@ -818,7 +818,7 @@ hr {
 
 .high-performance {
     position: absolute !important;
-    left: 40px !important;
+    left: 45px !important;
     font-size: 12px !important;
     top: 680px !important;
     line-height: 1.3 !important;
@@ -832,8 +832,8 @@ hr {
 
 .btns {
     position: absolute !important;
-    left: 22px !important;
-    top: calc(57vh + 320px) !important;
+    left: 35px !important;
+    top: 720px !important;
     gap: 12px;
     display: flex !important;
 }
