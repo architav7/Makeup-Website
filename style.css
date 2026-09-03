@@ -925,27 +925,31 @@ hr {
     color: #a9133b;
     }
 
-  .category-images {
+.category-images {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: auto !important;
+    overflow-x: auto;
     gap: 0;
     padding: 20px 0;
     scrollbar-width: none;
     scroll-snap-type: x mandatory;
 }
 
+.category-images::-webkit-scrollbar {
+    display: none;
+}
+
 .category-item {
-    flex: 0 0 100% !important;
-    width: 100% !important;
+    flex: 0 0 100vw !important;
+    width: 100vw !important;
     text-align: center;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
 }
 
 .category-item img {
-    width: 90vw !important;
-    height: 90vw !important;
+    width: 85vw !important;
+    height: 85vw !important;
     border-radius: 50%;
     object-fit: cover;
 }
