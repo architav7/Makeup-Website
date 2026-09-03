@@ -776,7 +776,7 @@ hr {
     background-position: right 20% !important;
     background-repeat: no-repeat;
     position: relative;
-    margin-bottom: 450px !important;
+    margin-bottom: 420px !important;
 }
 
 .front-text {
@@ -833,7 +833,7 @@ hr {
 .btns {
     position: absolute !important;
     left: 40px !important;
-    top: 750px !important;
+    top: 730px !important;
     gap: 12px;
     display: flex !important;
 }
