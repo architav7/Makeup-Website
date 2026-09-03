@@ -779,6 +779,16 @@ hr {
     }
 
     /* TEXT CONTAINER */
+
+    .front-text, 
+.high-performance, 
+.btns {
+    position: relative !important;
+    transform: translateY(55vh) !important; /* Shuts the content downwards perfectly */
+    text-align: center;
+    background-color: #ffffff;
+}
+
 .front-text {
     margin-top: 55vh !important; /* Adjust this value to shift it down exactly where you want it */
     position: relative !important;
