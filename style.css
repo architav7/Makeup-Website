@@ -789,7 +789,7 @@ hr {
 .new-collection {
     position: absolute !important;
     left: 22px !important;
-    top: 200px !important;
+    top: 100px !important;
 /* Move it up directly into the white space */
     margin: 0 !important;
     font-size: 10px !important;
