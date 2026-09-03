@@ -795,27 +795,25 @@ hr {
 
 .new-collection {
     position: relative !important;
-    left: 20px !important; /* Shifts text cleanly off the left edge */
+    left: 20px !important;
     top: 0 !important;
     margin: 0 0 10px 0 !important;
-    font-size: 12px !important;
+    font-size: 13px !important;
     letter-spacing: 1.5px;
     text-align: left !important;
 }
 
-
 .makeup-that,
 .empowers-you {
     position: relative !important;
-    left: 20px !important; /* Shifts text cleanly off the left edge */
-    font-size: 34px !important; /* Increased font size significantly */
-    line-height: 1.15 !important;
-    letter-spacing: -0.5px;
+    left: 20px !important;
+    font-size: 42px !important; /* Made the font much larger */
+    line-height: 1.1 !important;
+    letter-spacing: -0.8px;
     margin: 0 !important;
     display: block;
     text-align: left !important;
 }
-
 
 .makeup-that {
     top: 0 !important;
@@ -823,16 +821,15 @@ hr {
 
 .empowers-you {
     top: 0 !important;
-    margin-top: 6px !important;
+    margin-top: 4px !important;
     margin-bottom: 12px !important;
 }
-
 
 /* DESCRIPTION */
 .high-performance {
     position: absolute !important;
-    top: calc(100% + 140px) !important; /* Increased offset space for the bigger fonts */
-    left: 20px !important; /* Shifts text cleanly off the left edge */
+    top: calc(100% + 155px) !important; /* Increased space to fit the huge text */
+    left: 20px !important;
     width: calc(100% - 40px);
     line-height: 1.4 !important;
     text-align: left !important;
@@ -841,22 +838,20 @@ hr {
     transform: none !important;
 }
 
-
-
 .high-performance span {
     display: block;
-    font-size: 14px !important; /* Increased description font size */
+    font-size: 14px !important;
     color: #444;
 }
 
 /* BUTTONS */
 .btns {
     position: absolute !important;
-    top: calc(100% + 205px) !important; /* Pushed buttons down further to clear text */
-    left: 20px !important; /* Shifts buttons cleanly off the left edge */
+    top: calc(100% + 220px) !important; /* Pushed buttons down to clear the description */
+    left: 20px !important;
     width: calc(100% - 40px);
     display: flex;
-    justify-content: flex-start; /* Aligns the two buttons to the left side */
+    justify-content: flex-start;
     gap: 12px;
     background-color: #ffffff;
     padding-bottom: 25px; 
@@ -865,9 +860,9 @@ hr {
 
 .first,
 .second {
-    width: 135px; 
-    height: 36px;
-    font-size: 9.5px;
+    width: 150px; /* Made buttons slightly larger to look balanced with the text */
+    height: 40px; /* Made buttons taller */
+    font-size: 10px;
     font-weight: bold;
     letter-spacing: 0.5px;
     border-radius: 4px;
