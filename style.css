@@ -795,22 +795,27 @@ hr {
 
 .new-collection {
     position: relative !important;
-    left: 0 !important;
+    left: 20px !important; /* Shifts text cleanly off the left edge */
     top: 0 !important;
     margin: 0 0 10px 0 !important;
-    font-size: 11px !important;
+    font-size: 12px !important;
     letter-spacing: 1.5px;
+    text-align: left !important;
 }
+
 
 .makeup-that,
 .empowers-you {
     position: relative !important;
-    left: 0 !important;
-    font-size: 28px !important; /* हेडलाइन फॉन्ट को बड़ा किया */
+    left: 20px !important; /* Shifts text cleanly off the left edge */
+    font-size: 34px !important; /* Increased font size significantly */
     line-height: 1.15 !important;
     letter-spacing: -0.5px;
     margin: 0 !important;
+    display: block;
+    text-align: left !important;
 }
+
 
 .makeup-that {
     top: 0 !important;
@@ -818,37 +823,41 @@ hr {
 
 .empowers-you {
     top: 0 !important;
+    margin-top: 6px !important;
     margin-bottom: 12px !important;
 }
+
 
 /* DESCRIPTION */
 .high-performance {
     position: absolute !important;
-    top: calc(100% + 100px) !important; /* बड़े हेडलाइन के हिसाब से स्पेस बढ़ाया */
-    left: 0 !important;
-    width: 100%;
+    top: calc(100% + 140px) !important; /* Increased offset space for the bigger fonts */
+    left: 20px !important; /* Shifts text cleanly off the left edge */
+    width: calc(100% - 40px);
     line-height: 1.4 !important;
-    text-align: center;
+    text-align: left !important;
     background-color: #ffffff;
     margin-bottom: 0 !important;
     transform: none !important;
 }
 
+
+
 .high-performance span {
     display: block;
-    font-size: 13px !important; /* डिस्क्रिप्शन फॉन्ट को बड़ा किया */
+    font-size: 14px !important; /* Increased description font size */
     color: #444;
 }
 
 /* BUTTONS */
 .btns {
     position: absolute !important;
-    top: calc(100% + 160px) !important; /* बटन्स को और नीचे शिफ्ट किया ताकि ओवरलैप न हो */
-    left: 0 !important;
-    width: 100%;
+    top: calc(100% + 205px) !important; /* Pushed buttons down further to clear text */
+    left: 20px !important; /* Shifts buttons cleanly off the left edge */
+    width: calc(100% - 40px);
     display: flex;
-    justify-content: center;
-    gap: 10px;
+    justify-content: flex-start; /* Aligns the two buttons to the left side */
+    gap: 12px;
     background-color: #ffffff;
     padding-bottom: 25px; 
     transform: none !important;
@@ -856,9 +865,9 @@ hr {
 
 .first,
 .second {
-    width: 130px; 
-    height: 34px;
-    font-size: 9px;
+    width: 135px; 
+    height: 36px;
+    font-size: 9.5px;
     font-weight: bold;
     letter-spacing: 0.5px;
     border-radius: 4px;
@@ -871,7 +880,6 @@ hr {
     outline: none !important;
     box-shadow: none !important;
 }
-
 
 
 
