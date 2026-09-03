@@ -789,10 +789,12 @@ hr {
 .new-collection {
     position: absolute !important;
     left: 22px !important;
-    top: 57vh !important;
+    top: calc(57vh + 0px) !important; /* Move it up directly into the white space */
     margin: 0 !important;
-    font-size: 9px !important;
+    font-size: 10px !important;
+    white-space: nowrap !important; /* Forces it into one single line */
 }
+
 
 .makeup-that,
 .empowers-you {
