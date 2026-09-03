@@ -819,8 +819,8 @@ hr {
 .high-performance {
     position: absolute !important;
     left: 22px !important;
-    font-size: 4px !important;
-    top: calc(57vh + 65px) !important;
+    font-size: 12px !important;
+    top: 70px !important;
     line-height: 1.3 !important;
 }
 
