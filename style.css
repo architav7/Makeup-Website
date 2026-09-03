@@ -875,17 +875,22 @@ hr {
         text-align: center;
     }
 
-    .tabs {
-    position: absolute !important;
-    width: 100%;
-    left: 0;
-    /* This pushes the tabs bar safely below your button container */
-    top: calc(57vh + 390px) !important; 
-    background-color: #ffffff;
-    z-index: 5;
+  .tabs {
+    width: 100% !important;
+    position: relative !important; /* ज़बरदस्ती एब्सोल्यूट से नॉर्मल करेगा */
+    top: auto !important;          /* पुरानी सारी कैलकुलेशन हटा देगा */
+    left: 0 !important;
+    transform: none !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    background-color: #ffffff !important;
+    padding: 12px 10px !important;
+    box-sizing: border-box !important;
+    margin-top: 40px !important;    /* कैटगरी सेक्शन से नीचे दूरी बनाएगा */
+    margin-bottom: 20px !important; /* काले बार के ठीक ऊपर सेट करेगा */
 }
-
-
     .tab:not(:last-child) {
         border-right: 1px solid #ddd;
     }
