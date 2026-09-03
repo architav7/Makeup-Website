@@ -627,7 +627,7 @@ hr {
 
         position: relative;
         top: 10px;
-        left: -8px;
+        left: -6px;
         text-align: center;
     }
 
@@ -675,7 +675,7 @@ hr {
     .first-order,
     .help,
     .track {
-        color: #e43665;
+        color: #a9133b;
     }
 
 
