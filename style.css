@@ -769,34 +769,29 @@ hr {
     ========================= */
 
 
-    .background-img {
-        width: 100%;
-        height: 55vh;
-        background-size: cover !important;
-        background-position: right 20% !important;
-        background-repeat: no-repeat;
-        position: relative;
-    }
-
-    /* TEXT CONTAINER */
-
-    .front-text, 
-.high-performance, 
-.btns {
-    position: relative !important;
-    transform: translateY(55vh) !important; /* Shuts the content downwards perfectly */
-    text-align: center;
-    background-color: #ffffff;
+  .background-img {
+    width: 100%;
+    height: 55vh;
+    background-size: cover !important;
+    background-position: right 20% !important;
+    background-repeat: no-repeat;
+    position: relative;
+    /* This creates the necessary blank space directly beneath the image layout */
+    margin-bottom: 220px !important; 
 }
 
+/* TEXT CONTAINER */
 .front-text {
-    margin-top: 55vh !important; /* Adjust this value to shift it down exactly where you want it */
-    position: relative !important;
-    background-color: #ffffff;
+    position: absolute !important;
+    top: 100% !important; /* Starts precisely where the background image ends */
+    left: 0 !important;
+    width: 100%;
     text-align: center;
-    padding-top: 20px;
+    padding-top: 15px;
+    background-color: #ffffff;
+    margin-top: 0 !important; /* Clears out the broken gap margin */
+    transform: none !important; /* Clears out the broken gap translate */
 }
-
 
 .new-collection {
     position: relative !important;
@@ -828,13 +823,15 @@ hr {
 
 /* DESCRIPTION */
 .high-performance {
-    position: relative !important;
+    position: absolute !important;
+    top: calc(100% + 85px) !important; /* Drops cleanly past the primary heading */
     left: 0 !important;
-    top: 0 !important;
+    width: 100%;
     line-height: 1.4 !important;
     text-align: center;
     background-color: #ffffff;
-    margin-bottom: 15px;
+    margin-bottom: 0 !important;
+    transform: none !important;
 }
 
 .high-performance span {
@@ -845,19 +842,21 @@ hr {
 
 /* BUTTONS */
 .btns {
-    position: relative !important;
+    position: absolute !important;
+    top: calc(100% + 135px) !important; /* Drops cleanly past the sub-description text */
     left: 0 !important;
-    top: 0 !important;
+    width: 100%;
     display: flex;
     justify-content: center;
     gap: 10px;
     background-color: #ffffff;
-    padding-bottom: 25px; /* Adds clean spacing above your trust badges */
+    padding-bottom: 25px; 
+    transform: none !important;
 }
 
 .first,
 .second {
-    width: 130px; /* Increased width slightly so the long button text doesn't overflow */
+    width: 130px; 
     height: 34px;
     font-size: 9px;
     font-weight: bold;
