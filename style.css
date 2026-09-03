@@ -832,8 +832,8 @@ hr {
 
 .btns {
     position: absolute !important;
-    left: 35px !important;
-    top: 720px !important;
+    left: 40px !important;
+    top: 750px !important;
     gap: 12px;
     display: flex !important;
 }
