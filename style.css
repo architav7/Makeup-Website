@@ -852,13 +852,15 @@ hr {
 
     /* TABS */
 
-    .tab {
+   .tab {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 4px;
     flex: 1;
     min-width: 0;
-    justify-content: center; /* This centers everything inside the gray boxes */
+    margin: 0 auto !important;
+    text-align: center;
 }
 
 .tabs {
