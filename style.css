@@ -860,7 +860,7 @@ hr {
     align-items: center;
     background-color: #ffffff;
     padding: 12px 4px;
-    margin-left: -6px; /* Shifts the whole row left */
+    margin-left: -12px; /* Shifts the whole row left */
     box-sizing: border-box;
     gap: 4px;
 }
