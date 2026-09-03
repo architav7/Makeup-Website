@@ -876,7 +876,7 @@ hr {
         /* Force-removes the negative shift */
         margin-right: 0 !important;
         box-sizing: border-box;
-        margin-left: -6px !important;
+        margin-left: -10px !important;
         gap: 4px;
     }
 
