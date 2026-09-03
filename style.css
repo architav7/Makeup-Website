@@ -876,22 +876,14 @@ hr {
     }
 
     .tabs {
-        width: 100%;
-        position: relative;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #ffffff;
-        padding: 12px 8px !important;
-        margin-left: 0 !important;
-        /* Force-removes the negative shift */
-        margin-right: 0 !important;
-        box-sizing: border-box;
-        margin-left: -20px !important;
-        gap: 4px;
-    }
-
+    position: absolute !important;
+    width: 100%;
+    left: 0;
+    /* This pushes the tabs bar safely below your button container */
+    top: calc(57vh + 390px) !important; 
+    background-color: #ffffff;
+    z-index: 5;
+}
 
 
     .tab:not(:last-child) {
@@ -936,7 +928,7 @@ hr {
         width: 100%;
         padding: 25px 0 5px !important;
         text-align: center;
-
+    
         position: relative;
         top: -5px;
     }
