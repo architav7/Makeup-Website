@@ -919,8 +919,9 @@ hr {
     }
 
     .category p {
-        font-size: 16px;
-        font-weight: bold;
+    font-size: 24px;
+    line-height: 1.1;
+    width: 150px;
     }
 
     .category-images {
