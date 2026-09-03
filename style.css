@@ -769,25 +769,24 @@ hr {
     ========================= */
 
 
-  .background-img {
+ .background-img {
     width: 100%;
-    height: 55vh;
+    position: relative;
     background-size: cover !important;
     background-position: right 20% !important;
     background-repeat: no-repeat;
-    position: relative;
-    
-    /* ADD THESE LINES TO FORCE FLEX LAYOUT DOWNWARDS */
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-end !important; /* Pushes the start of the layout down */
-    margin-bottom: 250px !important; /* Makes room below the image frame */
+    display: grid !important;
+    grid-template-rows: 55vh auto auto auto !important;
+    gap: 0 !important;
+    margin-bottom: 40px !important;
+    height: auto !important;
 }
 
 /* TEXT CONTAINER */
 
 /* TEXT CONTAINER */
 .front-text {
+    grid-row: 2 !important;
     position: relative !important;
     display: flex !important;
     flex-direction: column !important;
@@ -795,10 +794,10 @@ hr {
     text-align: left !important;
     padding: 20px 20px 0 20px !important;
     background-color: #ffffff;
+    margin-top: 0 !important;
+    transform: none !important;
     top: auto !important;
-    
-    /* ADD THIS LINE */
-    margin-top: 55vh !important; /* Pushes the entire block right below the background picture */
+    left: auto !important;
 }
 
 .new-collection {
@@ -806,6 +805,7 @@ hr {
     margin: 0 0 10px 0 !important;
     font-size: 13px !important;
     letter-spacing: 1.5px;
+    text-align: left !important;
 }
 
 .makeup-that,
@@ -816,6 +816,7 @@ hr {
     letter-spacing: -0.8px;
     margin: 0 !important;
     display: block;
+    text-align: left !important;
 }
 
 .empowers-you {
@@ -823,14 +824,17 @@ hr {
 }
 
 /* DESCRIPTION */
+/* DESCRIPTION */
 .high-performance {
-    position: relative !important; /* Forces flow layout instead of overlapping */
-    width: auto !important;
-    margin: 15px 20px !important; /* Matches side paddings */
+    grid-row: 3 !important;
+    position: relative !important;
+    margin: 15px 20px !important;
     line-height: 1.4 !important;
     text-align: left !important;
     background-color: #ffffff;
+    transform: none !important;
     top: auto !important;
+    left: auto !important;
 }
 
 .high-performance span {
@@ -841,14 +845,16 @@ hr {
 
 /* BUTTONS */
 .btns {
-    position: relative !important; /* Snaps perfectly below the description */
-    width: auto !important;
+    grid-row: 4 !important;
+    position: relative !important;
     margin: 0 20px 25px 20px !important;
     display: flex !important;
     justify-content: flex-start !important;
     gap: 12px;
     background-color: #ffffff;
+    transform: none !important;
     top: auto !important;
+    left: auto !important;
 }
 
 .first,
