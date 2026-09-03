@@ -714,7 +714,8 @@ hr {
     }
 
     .nav-bar {
-        display: none;
+        display: block;
+        position: static;
     }
 
     .icons {
