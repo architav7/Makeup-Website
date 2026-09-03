@@ -955,40 +955,45 @@ hr {
 }
 
     .category-images {
-        width: 100%;
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        gap: 0;
-        padding: 20px 0;
-        scrollbar-width: none;
-        scroll-snap-type: x mandatory;
-    }
+    width: 100%;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important; /* Enables horizontal swipe functionality */
+    gap: 16px !important;       /* Clean spacing gutters between circle items */
+    padding: 20px 16px !important; /* Side breathing margins away from glass edges */
+    scrollbar-width: none !important; /* Conceals track bars on firefox layouts */
+    scroll-snap-type: x mandatory !important;
+    -webkit-overflow-scrolling: touch !important; /* Forces momentum tracking behavior on iOS browsers */
+}
 
-    .category-images::-webkit-scrollbar {
-        display: none;
-    }
+.category-images::-webkit-scrollbar {
+    display: none !important; /* Conceals scroll track indicators on desktop/chrome engines */
+}
 
-    .category-item {
-        flex: 0 0 100vw !important;
-        width: 100vw !important;
-        text-align: center;
-        scroll-snap-align: center;
-    }
+.category-item {
+    /* Set to 30% to anchor up to 3 circular slots on the screen row at a time */
+    flex: 0 0 30% !important; 
+    width: 30% !important;
+    text-align: center;
+    scroll-snap-align: start !important; /* Snaps the sliding element cleanly to the viewport wall */
+}
 
-    .category-item img {
-        width: 85vw !important;
-        height: 85vw !important;
-        border-radius: 50%;
-        object-fit: cover;
-    }
+.category-item img {
+    /* Adjusted sizing bounds to render clean, perfectly proportionate mobile circular thumbnails */
+    width: 75px !important;
+    height: 75px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: 1px solid #eee;
+}
 
-    .category-item p {
-        margin-top: 8px;
-        font-size: 10px;
-        white-space: nowrap;
-    }
-
+.category-item p {
+    margin-top: 8px !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    color: #333;
+    white-space: nowrap !important;
+}
 
     /* =========================
        BEST SELLERS
