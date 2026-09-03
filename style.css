@@ -941,15 +941,11 @@ hr {
 }
 
 
-
- 
 .category p {
-    font-size: 30px;
+    font-size: 40px;
     line-height: 1.2;
     width: 200px !important; 
     max-width: 100% !important;
-    color: #d04c64; 
-    text-align: center;
     white-space: normal !important; 
     margin: 0 auto !important;
 }
