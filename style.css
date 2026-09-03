@@ -623,9 +623,8 @@ hr {
         grid-row: 1;
 
         white-space: nowrap;
-        font-size: 9px;
+        font-size: 11px;
 
-        animation: moveShipping 9s linear infinite;
         position: relative;
         top: 9px;
     }
@@ -636,10 +635,10 @@ hr {
         grid-row: 2;
 
         white-space: nowrap;
-        font-size: 9px;
+        font-size: 11px;
 
-        animation: moveOrder 9s linear infinite;
     }
+
 
     /* THIRD ROW */
     #help-and-track {
@@ -659,36 +658,16 @@ hr {
     .help,
     .track {
         white-space: nowrap;
-        font-size: 9px !important;
+        font-size: 11px !important;
     }
 
     .track {
         white-space: nowrap;
-        font-size: 9px !important;
+        font-size: 11px !important;
         transform: translateX(40px);
     }
 
-    /* MARQUEE */
-    @keyframes moveShipping {
-        from {
-            transform: translateX(100%);
-        }
-
-        to {
-            transform: translateX(-100%);
-        }
-    }
-
-    @keyframes moveOrder {
-        from {
-            transform: translateX(100%);
-        }
-
-        to {
-            transform: translateX(-100%);
-        }
-    }
-
+    
     /* =========================
        HEADER
     ========================= */
@@ -919,7 +898,7 @@ hr {
 
     text-align: center;
 
-    animation: categoryMarquee 8s linear infinite !important;
+   
 }
 
 .category-item img {
@@ -936,39 +915,7 @@ hr {
     white-space: nowrap;
 }
 
-.category-item:nth-child(1) {
-    animation-delay: 0s;
-}
 
-.category-item:nth-child(2) {
-    animation-delay: -3s;
-}
-
-.category-item:nth-child(3) {
-    animation-delay: -6s;
-}
-
-.category-item:nth-child(4) {
-    animation-delay: -9s;
-}
-
-.category-item:nth-child(5) {
-    animation-delay: -12s;
-}
-
-.category-item:nth-child(6) {
-    animation-delay: -15s;
-}
-
-@keyframes categoryMarquee {
-    0% {
-        transform: translateX(350px);
-    }
-
-    100% {
-        transform: translateX(-500px);
-    }
-}
 
     /* =========================
        BEST SELLERS
