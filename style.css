@@ -715,7 +715,10 @@ hr {
 
     .nav-bar {
         display: block;
-        position: static;
+    }
+
+    .nav-bar ul {
+        display: none;
     }
 
     .icons {
