@@ -626,7 +626,8 @@ hr {
         font-size: 11px;
 
         position: relative;
-        top: 5px;
+        top: 8px;
+        left: -10px;
         text-align: center;
     }
 
