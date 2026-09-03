@@ -789,8 +789,8 @@ hr {
 .new-collection {
     position: absolute !important;
     left: 22px !important;
-    top: calc(55vh + 5px) !important;
- /* Move it up directly into the white space */
+    top: 360px !important;
+/* Move it up directly into the white space */
     margin: 0 !important;
     font-size: 10px !important;
     white-space: nowrap !important; /* Forces it into one single line */
