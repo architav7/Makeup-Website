@@ -851,7 +851,7 @@ hr {
     ========================= */
 
     /* TABS */
- .tabs {
+.tabs {
     width: 100%;
     position: relative;
     display: flex;
@@ -859,9 +859,10 @@ hr {
     justify-content: space-between;
     align-items: center;
     background-color: #ffffff;
-    padding: 12px 16px;
+    padding: 12px 4px;
+    margin-left: -6px; /* Shifts the whole row left */
     box-sizing: border-box;
-    gap: 8px;
+    gap: 4px;
 }
 
 .tab {
@@ -870,8 +871,9 @@ hr {
     gap: 4px;
     flex: 1;
     min-width: 0;
-    justify-content: flex-start;
+    justify-content: flex-start; /* Keeps items pushed left within their columns */
 }
+
 
 
 .tab:not(:last-child) {
