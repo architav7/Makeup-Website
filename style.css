@@ -925,14 +925,17 @@ hr {
     color: #a9133b;
     }
 
-    .category-images {
+   .category-images {
     width: 100%;
     display: flex;
     flex-wrap: nowrap;
-    overflow-x: auto;
+    overflow-x: auto !important;
+    overflow-y: hidden;
     gap: 20px;
     padding: 20px;
     scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+    touch-action: pan-x;
 }
 
 .category-images::-webkit-scrollbar {
