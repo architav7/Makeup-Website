@@ -920,8 +920,9 @@ hr {
 
     .category p {
     font-size: 24px;
-    line-height: 1.1;
+    line-height: 1.3;
     width: 150px;
+    color: #a9133b;
     }
 
     .category-images {
