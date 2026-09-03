@@ -615,6 +615,7 @@ hr {
 
         padding: 0;
         box-sizing: border-box;
+        border-bottom: 1px solid #a9133b;
     }
 
     /* FIRST ROW */
