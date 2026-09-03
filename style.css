@@ -765,11 +765,12 @@ hr {
     ========================= */
 
 
-    .background-img {
+   .background-img {
     width: 100%;
-    height: 85vh;
-    background-size: cover !important;
-    background-position: right center !important;
+    height: 0;
+    padding-top: 100%;
+    background-size: contain !important;
+    background-position: center top !important;
     background-repeat: no-repeat;
     position: relative;
 }
