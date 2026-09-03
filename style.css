@@ -948,53 +948,48 @@ hr {
     line-height: 1.3;
     width: auto !important; /* 2. Removes the tiny width constraint */
     max-width: 100% !important;
-    color: #d04c64;
     text-align: center;
     white-space: nowrap !important; /* 3. Guarantees it never wraps into two lines */
     margin: 0 auto !important;
 }
 
-    .category-images {
+.category-images {
     width: 100%;
     display: flex !important;
     flex-wrap: nowrap !important;
-    overflow-x: auto !important; /* Enables horizontal swipe functionality */
-    gap: 16px !important;       /* Clean spacing gutters between circle items */
-    padding: 20px 16px !important; /* Side breathing margins away from glass edges */
-    scrollbar-width: none !important; /* Conceals track bars on firefox layouts */
+    overflow-x: auto !important;
+    gap: 0 !important;
+    padding: 20px 0 !important;
+    scrollbar-width: none !important;
     scroll-snap-type: x mandatory !important;
-    -webkit-overflow-scrolling: touch !important; /* Forces momentum tracking behavior on iOS browsers */
+    -webkit-overflow-scrolling: touch !important;
 }
 
 .category-images::-webkit-scrollbar {
-    display: none !important; /* Conceals scroll track indicators on desktop/chrome engines */
+    display: none !important;
 }
 
 .category-item {
-    /* Set to 30% to anchor up to 3 circular slots on the screen row at a time */
-    flex: 0 0 30% !important; 
-    width: 30% !important;
+    flex: 0 0 100% !important;
+    width: 100% !important;
     text-align: center;
-    scroll-snap-align: start !important; /* Snaps the sliding element cleanly to the viewport wall */
+    scroll-snap-align: center;
 }
 
 .category-item img {
-    /* Adjusted sizing bounds to render clean, perfectly proportionate mobile circular thumbnails */
-    width: 75px !important;
-    height: 75px !important;
+    width: 85vw !important;
+    height: 85vw !important;
     border-radius: 50% !important;
     object-fit: cover !important;
-    border: 1px solid #eee;
 }
 
 .category-item p {
-    margin-top: 8px !important;
-    font-size: 11px !important;
+    margin-top: 12px !important;
+    font-size: 14px !important;
     font-weight: 500 !important;
     color: #333;
     white-space: nowrap !important;
 }
-
     /* =========================
        BEST SELLERS
     ========================= */
