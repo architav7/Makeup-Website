@@ -970,10 +970,11 @@ hr {
 }
 
 .category-item {
-    flex: 0 0 100% !important;
-    width: 100% !important;
-    text-align: center;
-    scroll-snap-align: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
 }
 
 .category-item img {
