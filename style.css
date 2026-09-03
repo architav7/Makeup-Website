@@ -767,12 +767,12 @@ hr {
 
     .background-img {
     width: 100%;
-    height: 75vh;
+    height: 65vh;
     background-size: 110% auto !important;
     background-position: center top !important;
     background-repeat: no-repeat;
+    position: relative;
 }
-
     /* TEXT */
     .front-text {
         left: 22px !important;
