@@ -926,47 +926,36 @@ hr {
     }
 
     .category-images {
-        width: 100%;
-        height: 155px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px;
+    scrollbar-width: none;
+}
 
-        display: flex !important;
-        flex-wrap: nowrap !important;
+.category-images::-webkit-scrollbar {
+    display: none;
+}
 
-        overflow: hidden;
+.category-item {
+    flex: 0 0 auto;
+    text-align: center;
+}
 
-        gap: 15px;
-        padding: 18px 18px 20px !important;
+.category-item img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
-        scrollbar-width: none;
-    }
-
-    .category-images::-webkit-scrollbar {
-        display: none;
-    }
-
-    .category-item {
-        flex: 0 0 105px !important;
-        width: 105px !important;
-
-        text-align: center;
-
-
-    }
-
-    .category-item img {
-        width: 105px !important;
-        height: 105px !important;
-
-        border-radius: 50%;
-        object-fit: cover;
-    }
-
-    .category-item p {
-        margin-top: 8px;
-        font-size: 9px;
-        white-space: nowrap;
-    }
-
+.category-item p {
+    margin-top: 8px;
+    font-size: 10px;
+    white-space: nowrap;
+}
 
 
     /* =========================
