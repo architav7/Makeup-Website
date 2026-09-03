@@ -701,16 +701,20 @@ hr {
         transform: none !important;
         text-align: center;
         margin: 0 !important;
+        color: #a9133b;
     }
 
     .glamora span {
         font-size: 24px;
         letter-spacing: 3px;
+        color: #a9133b;
+
     }
 
     .glamora small {
         font-size: 8px;
         letter-spacing: 3px;
+        color: #a9133b;
     }
 
     .nav-bar {
