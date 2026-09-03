@@ -809,11 +809,11 @@ hr {
 }
 
 .makeup-that {
-    top: calc(57vh + 16px) !important;
+    top: 30px !important;
 }
 
 .empowers-you {
-    top: calc(57vh + 38px) !important;
+    top: 40px !important;
 }
 
 .high-performance {
