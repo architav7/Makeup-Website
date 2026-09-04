@@ -1056,7 +1056,7 @@ hr {
 
 .best-seller-imgs {
     /* FIXED: Added !important and removed the conflicting 'margin: 0 !important;' from below */
-    margin-top: 50px !important; 
+    margin-top: 55px !important; 
     
     width: 100%;
     display: flex !important; 
