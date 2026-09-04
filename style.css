@@ -933,12 +933,16 @@ hr {
 
  .category { 
     width: 100%; 
-    /* Padding-top ko 0 kiya aur margin-top ko minus mein diya taaki text upar shift ho sake */
     margin-top: -25px !important; 
-    padding: 0 0 0 24px !important; 
+    padding-top: 0 !important; 
+    
+    /* Decrease this value to push the text further to the left */
+    padding-left: 5px !important; 
+    
     text-align: left !important; 
     display: block !important; 
-} 
+}
+
 
 .category p { 
     font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; 
