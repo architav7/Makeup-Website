@@ -933,7 +933,9 @@ hr {
 
  .category { 
     width: 100%; 
-    padding: 20px 0 0 24px !important; /* Left se 24px padding di hai taaki text screen ke edge se chipke na aur thoda clean dikhe */
+    /* Padding-top ko 0 kiya aur margin-top ko minus mein diya taaki text upar shift ho sake */
+    margin-top: -25px !important; 
+    padding: 0 0 0 24px !important; 
     text-align: left !important; 
     display: block !important; 
 } 
@@ -944,15 +946,15 @@ hr {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    line-height: 1.15; 
+    line-height: 1.2; 
     color: #111;
     margin: 0 !important;
 
-    /* --- Sirf CSS se do row mein break karne ka solid logic --- */
-    display: inline-block !important;
+    /* --- Word Wrapping Logic --- */
+    display: block !important;
     white-space: normal !important; 
-    word-spacing: 9999px !important; /* Har word ko zabardasti naye line par bhejega */
-    max-width: 180px !important;     /* Text width ko limit karega taaki structure bilkul safe rahe */
+    width: 160px !important; /* 'SHOP BY' ek line mein aur 'CATEGORY' neeche */
+    max-width: 100% !important;
 }
 
 
