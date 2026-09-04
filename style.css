@@ -1018,8 +1018,6 @@ hr {
 
     /* --- Best Sellers Heading Section --- */
 
-
-    /* --- Best Sellers Heading Section --- */
 .best-sellers {
     width: 100%;
     /* Added positive margin-top to create clear breathing room from the category section above */
@@ -1065,6 +1063,7 @@ hr {
     -webkit-overflow-scrolling: touch !important; 
     box-sizing: border-box !important;
 }
+
 
 
 .best-seller-imgs::-webkit-scrollbar {
