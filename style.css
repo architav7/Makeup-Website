@@ -1016,48 +1016,78 @@ hr {
        BEST SELLERS
     ========================= */
 
-    .best-sellers {
-        width: 100%;
-        padding: 15px 18px 10px !important;
-    }
+    /* --- Best Sellers Heading Section --- */
+.best-sellers {
+    width: 100%;
+    /* Same top alignment and spacing as the category heading */
+    margin-top: -25px !important; 
+    padding-top: 0 !important; 
+    padding-left: 35px !important; /* Matches your exact category text gap */
+    text-align: left !important;
+    display: block !important;
+}
 
-    .best-sellers p {
-        font-size: 16px;
-        font-weight: bold;
-        margin-bottom: 15px;
-    }
+.best-sellers p {
+    /* Identical modern typography stack */
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; 
+    font-size: 28px; 
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.2; 
+    color: #111;
+    margin: 0 !important;
+}
 
-    .best-seller-imgs {
-        width: 100%;
+/* --- Smooth Sliding Layout Container --- */
+.best-seller-imgs {
+    width: 100%;
+    /* Replaced grid layout with a flexible horizontal layout */
+    display: flex !important; 
+    flex-wrap: nowrap !important; 
+    overflow-x: auto !important; 
+    gap: 15px !important; /* Space between each product item */
+    padding: 20px 24px !important; /* Padding keeps layout clean and ends un-cropped */
+    margin: 0 !important;
+    scrollbar-width: none !important; /* Hides horizontal browser scrollbars */
+    scroll-snap-type: x proximity !important; 
+    -webkit-overflow-scrolling: touch !important; 
+    box-sizing: border-box !important;
+}
 
-        display: grid !important;
-        grid-template-columns: 1fr 1fr !important;
+.best-seller-imgs::-webkit-scrollbar {
+    display: none !important; /* Hides scrollbars on Chrome, Safari, and Opera */
+}
 
-        gap: 22px 10px;
+/* --- Individual Product Card Layout --- */
+.best-seller-imgs>* {
+    /* Limits size to 45% so next product acts as a visible teaser to swipe left */
+    flex: 0 0 45% !important; 
+    width: 45% !important; 
+    scroll-snap-align: start;
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
+    min-width: 0;
+}
 
-        padding: 0 !important;
-        margin: 0 !important;
-    }
+.best-seller-imgs img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important; /* Keeps product background images cleanly square */
+    object-fit: cover !important;
+    display: block;
+}
 
-    .best-seller-imgs>* {
-        width: 100% !important;
-        min-width: 0;
-    }
+/* --- Rating Elements --- */
+.rating-container {
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+}
 
-    .best-seller-imgs img {
-        width: 100% !important;
-        height: auto !important;
-
-        display: block;
-    }
-
-    .rating-container {
-        font-size: 10px;
-    }
-
-    .rating {
-        margin-top: 4px;
-    }
+.rating {
+    margin-top: 4px;
+}
 
 
     /* =========================
