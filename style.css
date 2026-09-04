@@ -1020,11 +1020,17 @@ hr {
 
 .best-sellers {
     width: 100%;
-    /* Added positive margin-top to create clear breathing room from the category section above */
     margin-top: 5px !important; 
-    /* Decreased left padding to 24px so it aligns perfectly with the elements above */
-    padding-left: 5px;
-    padding: 0 0 0 24px !important; 
+    
+    /* --- FIXED: Removed shorthand conflict --- */
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-right: 0 !important;
+    
+    /* Change only this number to move it left or right. 
+       0px to 5px will bring it to the extreme left */
+    padding-left: 5px !important; 
+    
     text-align: left !important;
     display: block !important;
 }
