@@ -1021,7 +1021,7 @@ hr {
 .best-sellers {
     width: 100%;
     /* Added positive margin-top to create clear breathing room from the category section above */
-    margin-top: 20px !important; 
+    margin-top: 10px !important; 
     /* Decreased left padding to 24px so it aligns perfectly with the elements above */
     padding: 0 0 0 24px !important; 
     text-align: left !important;
