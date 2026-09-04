@@ -1053,17 +1053,18 @@ hr {
 }
 
 /* --- Best Sellers Images Layout --- */
+
 .best-seller-imgs {
-    margin-top: 50px;
+    /* FIXED: Added !important and removed the conflicting 'margin: 0 !important;' from below */
+    margin-top: 50px !important; 
+    
     width: 100%;
     display: flex !important; 
     flex-wrap: nowrap !important; 
     overflow-x: auto !important; 
     gap: 15px !important; 
     
-    /* Clean padding layout to ensure a balanced gap is visible at the bottom of the section */
     padding: 0 24px 35px !important; 
-    margin: 0 !important;
     scrollbar-width: none !important; 
     scroll-snap-type: x proximity !important; 
     -webkit-overflow-scrolling: touch !important; 
