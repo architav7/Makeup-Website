@@ -1022,10 +1022,11 @@ hr {
     width: 100%;
     
     /* Text ko aur upar le jaane ke liye isse minus (-20px) kar diya hai */
-    margin-top: -20px !important; 
+    margin-top: -15px !important; 
     
     /* Text ko extreme left side edge par chipkane ke liye isse 0px kar diya hai */
     padding-left: 0px !important; 
+    margin-left: -10px;
     
     text-align: left !important;
     display: block !important;
