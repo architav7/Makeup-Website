@@ -1020,58 +1020,60 @@ hr {
 
 .best-sellers {
     width: 100%;
-    
-    /* Text ko aur upar le jaane ke liye isse minus (-20px) kar diya hai */
     margin-top: -15px !important; 
-    
-    /* Text ko extreme left side edge par chipkane ke liye isse 0px kar diya hai */
     padding-left: 0px !important; 
-    margin-left: -20px;
-    
+    margin-left: -20px !important; /* Fixed: Added !important to lock left position */
     text-align: left !important;
     display: block !important;
 }
 
-
 .best-sellers p {
-    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; 
-    font-size: 28px; 
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    line-height: 1.2; 
-    color: #111;
+    /* Changed to premium Serif font stack like Rare Beauty style */
+    font-family: 'Playfair Display', 'Didot', 'Georgia', serif; 
+    font-size: 34px; /* Slightly larger elegant font size */
+    font-weight: 400; /* Clean normal weight serif look */
+    text-transform: capitalize; /* Changes BEST SELLERS from ALL CAPS to 'Bestsellers' style */
+    letter-spacing: 0px;
+    line-height: 1.1; 
+    color: #1a1a1a;
     
-    /* Increased bottom margin to successfully push the product cards down and fix the spacing */
+    /* Kept your 30px spacing but reset width so 'Bestsellers' flows beautifully */
     margin: 0 0 30px 0 !important; 
-
-    /* Kept your perfect two-line text break layout */
     display: block !important;
-    white-space: normal !important; 
-    width: 130px !important; 
+    white-space: nowrap !important; /* Keeps it on one line as per your new reference screenshot */
+    width: auto !important; 
     max-width: 100% !important;
 }
 
-/* --- Best Sellers Images Layout --- */
+/* OPTIONAL: Adds the underlined 'SHOP NOW' link via CSS completely (Remove if not needed) */
+.best-sellers p::after {
+    content: 'SHOP NOW';
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #1a1a1a;
+    margin-top: 8px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
 
+/* --- Best Sellers Images Layout --- */
 .best-seller-imgs {
     margin-top: 55px !important; 
     width: 100% !important;
-    
-    /* Forces the inner track to follow horizontal flexing layout */
     display: flex !important; 
     flex-wrap: nowrap !important; 
-    
-    /* UNLOCKS SCROLLING: This forces hidden overflow images to become scrollable */
     overflow-x: scroll !important; 
     overflow-y: hidden !important;
     
-    gap: 15px !important; 
+    gap: 16px !important; /* Clean premium spacing between the sliding panels */
     padding: 0 24px 35px !important; 
     
-    /* Native smooth mobile touch swipe mechanism */
     -webkit-overflow-scrolling: touch !important; 
-    scroll-snap-type: x proximity !important; 
+    scroll-snap-type: x mandatory !important; /* Changed to mandatory for perfect center locking snap */
     box-sizing: border-box !important;
     scrollbar-width: none !important; 
 }
@@ -1088,11 +1090,11 @@ hr {
 
 /* Individual Product Cards */
 .best-seller-imgs > * {
-    /* Safe item sizing so 2.2 cards display on screen while keeping items 5 & 6 active */
-    flex: 0 0 45% !important; 
-    width: 45% !important; 
-    max-width: 45% !important;
-    min-width: 45% !important;
+    /* CHANGED: Increased from 45% to 85% to display one big clean layout card at a time */
+    flex: 0 0 85% !important; 
+    width: 85% !important; 
+    max-width: 85% !important;
+    min-width: 85% !important;
     
     scroll-snap-align: start;
     display: flex !important;
@@ -1100,7 +1102,16 @@ hr {
     box-sizing: border-box !important;
 }
 
+/* Adding background framing design matching your screenshot exactly */
+.best-seller-imgs img {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important; /* Keeps the frame square */
+    object-fit: cover !important;
+    background-color: #f7f4f0; /* Premium subtle beige/off-white background panel */
+    display: block;
 }
+
 
 /* --- Rating Elements --- */
 .rating-container {
