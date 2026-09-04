@@ -929,69 +929,78 @@ hr {
        SHOP BY CATEGORY
     ========================= */
 
- .category {
-    width: 100%;
-    padding: 25px 0 5px !important;
-    text-align: center;
-    position: relative;
-    top: -5px;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-}
+ /* --- Shop By Category Heading Section --- */
+.category { 
+    width: 100%; 
+    /* padding kam karke position top hatayi taaki heading upar shift ho sake */
+    padding: 15px 20px 0 !important; 
+    text-align: left !important; /* Center se Left align kiya */
+    display: block !important; /* Flex hataya taaki left alignment control ho sake */
+} 
 
-
-.category p {
-    font-size: 40px;
-    line-height: 1.2;
-    width: 200px !important; 
-    max-width: 100% !important;
+.category p { 
+    /* Modern minimalist cleaner sans-serif font */
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; 
+    font-size: 28px; /* Mobile screen ke hisab se text size optimize kiya */
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.2; 
+    width: auto !important; /* 200px limit ko hata diya */
+    max-width: 100% !important; 
     white-space: normal !important; 
-    margin: 0 auto !important;
-}
+    margin: 0 !important; 
+    color: #111;
+} 
 
-.category-images {
-    width: 100%;
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    gap: 0 !important;
-    padding: 20px 0 !important;
-    scrollbar-width: none !important;
-    scroll-snap-type: x mandatory !important;
-    -webkit-overflow-scrolling: touch !important;
-}
-
-.category-images::-webkit-scrollbar {
-    display: none !important;
-}
-
-.category-item {
-    flex: 0 0 100% !important; 
-    width: 100% !important;
-    scroll-snap-align: center;
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
+/* --- Sliding Layout for Images --- */
+.category-images { 
+    width: 100%; 
+    display: flex !important; 
+    flex-wrap: nowrap !important; 
+    overflow-x: auto !important; 
+    gap: 15px !important; /* Items ke beech clean space banayi */
+    padding: 20px !important; /* Left aur right side se cuts rokhne ke liye uniform padding */
+    scrollbar-width: none !important; 
+    scroll-snap-type: x proximity !important; /* Smooth scroll layout */
+    -webkit-overflow-scrolling: touch !important; 
     box-sizing: border-box !important;
-    padding: 0 15px !important; 
-}
+} 
 
+.category-images::-webkit-scrollbar { 
+    display: none !important; 
+} 
 
-.category-item img {
-    width: 82vw !important; 
-    height: 82vw !important;
-    border-radius: 50% !important;
-    object-fit: cover !important;
-}
+/* --- Individual Items Layout --- */
+.category-item { 
+    /* 100% hatakar fix kiya taaki side ki images preview dikhein aur screen par na katein */
+    flex: 0 0 45% !important; 
+    width: 45% !important; 
+    scroll-snap-align: start; 
+    display: flex !important; 
+    flex-direction: column !important; 
+    align-items: center !important; 
+    justify-content: center !important; 
+    box-sizing: border-box !important; 
+    padding: 0 !important; 
+} 
 
-.category-item p {
-    margin-top: 12px !important;
-    font-size: 14px !important;
-    font-weight: 500 !important;
-    color: #333;
-    white-space: nowrap !important;
+.category-item img { 
+    width: 100% !important; /* 45% container ke hisab se fully responsive layout */
+    height: auto !important; 
+    aspect-ratio: 1 / 1 !important; /* Image ko perfect circle banaye rakhega */
+    border-radius: 50% !important; 
+    object-fit: cover !important; 
+} 
+
+.category-item p { 
+    margin-top: 12px !important; 
+    font-family: 'Inter', sans-serif;
+    font-size: 13px !important; 
+    font-weight: 600 !important; 
+    color: #222; 
+    text-transform: uppercase;
+    white-space: nowrap !important; 
 }
 
     /* =========================
