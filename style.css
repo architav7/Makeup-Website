@@ -1026,7 +1026,7 @@ hr {
     
     /* Text ko extreme left side edge par chipkane ke liye isse 0px kar diya hai */
     padding-left: 0px !important; 
-    margin-left: -15px;
+    margin-left: -20px;
     
     text-align: left !important;
     display: block !important;
