@@ -1021,6 +1021,7 @@ hr {
    ========================================================================= */
 
 /* --- 1. Heading Layout Block --- */
+/* --- 1. Heading Block Fix --- */
 .best-sellers {
     width: 100%;
     margin-top: -15px !important; 
@@ -1030,7 +1031,6 @@ hr {
     display: block !important;
 }
 
-/* --- 2. Typography Block --- */
 .best-sellers p {
     font-family: 'Playfair Display', 'Didot', 'Georgia', serif; 
     font-size: 34px; 
@@ -1046,17 +1046,13 @@ hr {
     max-width: 100% !important;
 }
 
-/* --- 3. Main Slider Container (Forced CSS Grid Layout) --- */
+/* --- 2. Main Tracking Container (Resetting Transform & Origin Offset) --- */
 .best-seller-imgs {
     margin-top: 55px !important; 
     width: 100% !important;
     
-    /* --- CHANGED TO GRID: Destroys any dynamic flexbox bugs --- */
-    display: grid !important; 
-    /* Specifies exactly 6 independent columns that cannot shrink or collapse */
-    grid-template-columns: repeat(6, 80vw) !important; 
-    
-    /* Strict overflow setup to enforce dynamic touch-swiping */
+    display: flex !important; 
+    flex-wrap: nowrap !important; 
     overflow-x: auto !important; 
     overflow-y: hidden !important;
     scroll-behavior: smooth !important;
@@ -1069,21 +1065,28 @@ hr {
     scroll-snap-type: x mandatory !important; 
     box-sizing: border-box !important;
     scrollbar-width: none !important; 
+    
+    /* --- THE CRITICAL FIX: Destroys hidden frame shifting --- */
+    transform: none !important; 
+    justify-content: flex-start !important; /* Forces layout to boot strictly from item 1 */
 }
 
 .best-seller-imgs::-webkit-scrollbar { 
     display: none !important; 
 }
 
-/* --- 4. Individual Grid Card Layout Fix --- */
+/* --- 3. Individual Cards (Exact Viewport Math to prevent cutting) --- */
 .best-seller-imgs > * {
-    /* Resets flex overrides completely */
-    flex: none !important; 
+    /* Using 76vw width + 16px gaps prevents the next card from being cut clumsily */
+    flex: 0 0 76vw !important; 
+    width: 76vw !important; 
+    max-width: 76vw !important;
+    min-width: 76vw !important;
     
-    /* Forces the box item size to strictly use viewport layout bounds */
-    width: 100% !important; 
-    max-width: 100% !important;
-    min-width: 100% !important;
+    /* Strict rendering instructions */
+    flex-shrink: 0 !important; 
+    flex-grow: 0 !important;
+    transform: none !important;
     
     scroll-snap-align: start !important; 
     display: flex !important;
@@ -1091,7 +1094,7 @@ hr {
     box-sizing: border-box !important;
 }
 
-/* --- 5. Images Square Panel Scaling --- */
+/* --- 4. Images Fix --- */
 .best-seller-imgs img {
     width: 100% !important;
     height: auto !important;
