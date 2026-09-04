@@ -1018,98 +1018,96 @@ hr {
 
     /* --- Best Sellers Heading Section --- */
 
+
+    /* ==========================================================================
+   BEST SELLERS SECTION (COMPLETE REPLACEMENT)
+   ========================================================================== */
+
+/* --- 1. Heading Layout Block --- */
 .best-sellers {
     width: 100%;
     margin-top: -15px !important; 
     padding-left: 0px !important; 
-    margin-left: -20px !important; /* Fixed: Added !important to lock left position */
+    margin-left: -20px !important;
     text-align: left !important;
     display: block !important;
 }
 
+/* --- 2. Typography & 'SHOP NOW' Custom Link --- */
 .best-sellers p {
-    /* Changed to premium Serif font stack like Rare Beauty style */
     font-family: 'Playfair Display', 'Didot', 'Georgia', serif; 
-    font-size: 34px; /* Slightly larger elegant font size */
-    font-weight: 400; /* Clean normal weight serif look */
-    text-transform: capitalize; /* Changes BEST SELLERS from ALL CAPS to 'Bestsellers' style */
+    font-size: 34px; 
+    font-weight: 400; 
+    text-transform: capitalize; 
     letter-spacing: 0px;
     line-height: 1.1; 
     color: #1a1a1a;
-    
-    /* Kept your 30px spacing but reset width so 'Bestsellers' flows beautifully */
     margin: 0 0 30px 0 !important; 
     display: block !important;
-    white-space: nowrap !important; /* Keeps it on one line as per your new reference screenshot */
+    white-space: nowrap !important; 
     width: auto !important; 
     max-width: 100% !important;
 }
 
-/* OPTIONAL: Adds the underlined 'SHOP NOW' link via CSS completely (Remove if not needed) */
-.best-sellers p::after {
-    content: 'SHOP NOW';
-    display: block;
-    font-family: 'Inter', sans-serif;
-    font-size: 11px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #1a1a1a;
-    margin-top: 8px;
-    text-decoration: underline;
-    text-underline-offset: 4px;
-}
-
-
-/* --- Best Sellers Images Layout Container --- */
+/* --- 3. Main Slider Tracking Container --- */
 .best-seller-imgs {
     margin-top: 55px !important; 
     width: 100% !important;
     
-    /* CRITICAL FIXES FOR ALL 6 IMAGES: */
+    /* Strict horizontal linear flex layout axis */
     display: flex !important; 
-    flex-wrap: nowrap !important; /* Forces all 6 images to stay on one straight row */
-    overflow-x: auto !important; /* Unlocks smooth mobile swipe/scroll */
-    overflow-y: hidden !important; 
+    flex-wrap: nowrap !important; 
     
-    gap: 15px !important; 
-    padding: 0 24px 35px !important; 
+    /* Forces track viewport to render from the absolute 1st item node */
+    overflow-x: auto !important; 
+    overflow-y: hidden !important;
+    scroll-behavior: smooth !important;
+    
+    gap: 16px !important; 
+    padding: 0 24px 35px 24px !important; /* Fixed inner content boundary alignment */
+    margin: 0 !important;
     
     -webkit-overflow-scrolling: touch !important; 
-    scroll-snap-type: x proximity !important; 
+    scroll-snap-type: x mandatory !important; /* Instant snap locking on active column card */
     box-sizing: border-box !important;
     scrollbar-width: none !important; 
+}
+
+/* Fixes trailing margin loss during dynamic overflow scrolling track bounds */
+.best-seller-imgs::after {
+    content: '';
+    padding-right: 1px !important;
 }
 
 .best-seller-imgs::-webkit-scrollbar { 
     display: none !important; 
 }
 
-/* --- Individual Product Cards Layout --- */
+/* --- 4. Individual Product Grid Cards (All 6 Items Forced Active) --- */
 .best-seller-imgs > * {
-    /* Set this to whatever sizing you want (e.g., 45% for 2 items, 80% for 1 large item) */
-    flex: 0 0 80% !important; 
-    width: 80% !important; 
+    /* Premium viewport width parameters mirroring the screenshot reference */
+    flex: 0 0 82% !important; 
+    width: 82% !important; 
+    max-width: 82% !important;
+    min-width: 82% !important;
     
-    /* CRITICAL FIX: Forces the browser to keep all 6 items fully active without collapsing them */
-    min-width: 80% !important; 
-    max-width: 80% !important;
-    flex-shrink: 0 !important; /* Strictly prevents images 5 & 6 from getting crushed to 0px width */
+    /* STOPS DISAPPEARING: Prevents browser framework engine from dropping initial left elements */
+    flex-shrink: 0 !important; 
+    flex-grow: 0 !important;
     
-    scroll-snap-align: start;
+    scroll-snap-align: start !important; 
     display: flex !important;
     flex-direction: column !important;
     box-sizing: border-box !important;
 }
 
-
-/* Adding background framing design matching your screenshot exactly */
+/* --- 5. Images Square Panel Scaling --- */
 .best-seller-imgs img {
     width: 100% !important;
     height: auto !important;
-    aspect-ratio: 1 / 1 !important; /* Keeps the frame square */
+    aspect-ratio: 1 / 1 !important; 
     object-fit: cover !important;
-    background-color: #f7f4f0; /* Premium subtle beige/off-white background panel */
+    background-color: #f7f4f0; /* Soft luxury off-white panel backing */
     display: block;
 }
 
