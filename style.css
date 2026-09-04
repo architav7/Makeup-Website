@@ -1060,47 +1060,48 @@ hr {
     text-underline-offset: 4px;
 }
 
-/* --- Best Sellers Images Layout --- */
+
+/* --- Best Sellers Images Layout Container --- */
 .best-seller-imgs {
     margin-top: 55px !important; 
     width: 100% !important;
-    display: flex !important; 
-    flex-wrap: nowrap !important; 
-    overflow-x: scroll !important; 
-    overflow-y: hidden !important;
     
-    gap: 16px !important; /* Clean premium spacing between the sliding panels */
+    /* CRITICAL FIXES FOR ALL 6 IMAGES: */
+    display: flex !important; 
+    flex-wrap: nowrap !important; /* Forces all 6 images to stay on one straight row */
+    overflow-x: auto !important; /* Unlocks smooth mobile swipe/scroll */
+    overflow-y: hidden !important; 
+    
+    gap: 15px !important; 
     padding: 0 24px 35px !important; 
     
     -webkit-overflow-scrolling: touch !important; 
-    scroll-snap-type: x mandatory !important; /* Changed to mandatory for perfect center locking snap */
+    scroll-snap-type: x proximity !important; 
     box-sizing: border-box !important;
     scrollbar-width: none !important; 
-}
-
-/* Forces browsers to safely calculate hidden spaces without cutting columns */
-.best-seller-imgs::after {
-    content: '';
-    padding-right: 1px !important;
 }
 
 .best-seller-imgs::-webkit-scrollbar { 
     display: none !important; 
 }
 
-/* Individual Product Cards */
+/* --- Individual Product Cards Layout --- */
 .best-seller-imgs > * {
-    /* CHANGED: Increased from 45% to 85% to display one big clean layout card at a time */
-    flex: 0 0 85% !important; 
-    width: 85% !important; 
-    max-width: 85% !important;
-    min-width: 85% !important;
+    /* Set this to whatever sizing you want (e.g., 45% for 2 items, 80% for 1 large item) */
+    flex: 0 0 80% !important; 
+    width: 80% !important; 
+    
+    /* CRITICAL FIX: Forces the browser to keep all 6 items fully active without collapsing them */
+    min-width: 80% !important; 
+    max-width: 80% !important;
+    flex-shrink: 0 !important; /* Strictly prevents images 5 & 6 from getting crushed to 0px width */
     
     scroll-snap-align: start;
     display: flex !important;
     flex-direction: column !important;
     box-sizing: border-box !important;
 }
+
 
 /* Adding background framing design matching your screenshot exactly */
 .best-seller-imgs img {
