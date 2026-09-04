@@ -930,28 +930,31 @@ hr {
     ========================= */
 
  /* --- Shop By Category Heading Section --- */
-.category { 
+
+ .category { 
     width: 100%; 
-    /* padding kam karke position top hatayi taaki heading upar shift ho sake */
-    padding: 15px 20px 0 !important; 
-    text-align: left !important; /* Center se Left align kiya */
-    display: block !important; /* Flex hataya taaki left alignment control ho sake */
+    padding: 20px 0 0 24px !important; /* Left se 24px padding di hai taaki text screen ke edge se chipke na aur thoda clean dikhe */
+    text-align: left !important; 
+    display: block !important; 
 } 
 
 .category p { 
-    /* Modern minimalist cleaner sans-serif font */
     font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; 
-    font-size: 28px; /* Mobile screen ke hisab se text size optimize kiya */
+    font-size: 28px; 
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    line-height: 1.2; 
-    width: auto !important; /* 200px limit ko hata diya */
-    max-width: 100% !important; 
-    white-space: normal !important; 
-    margin: 0 !important; 
+    line-height: 1.15; 
     color: #111;
-} 
+    margin: 0 !important;
+
+    /* --- Sirf CSS se do row mein break karne ka solid logic --- */
+    display: inline-block !important;
+    white-space: normal !important; 
+    word-spacing: 9999px !important; /* Har word ko zabardasti naye line par bhejega */
+    max-width: 180px !important;     /* Text width ko limit karega taaki structure bilkul safe rahe */
+}
+
 
 /* --- Sliding Layout for Images --- */
 .category-images { 
