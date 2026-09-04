@@ -1017,17 +1017,20 @@ hr {
     ========================= */
 
     /* --- Best Sellers Heading Section --- */
-/* --- Best Sellers Heading Section --- */
+
+
+    /* --- Best Sellers Heading Section --- */
 .best-sellers {
     width: 100%;
-    margin-top: -25px !important; 
-    padding: 0 0 0 35px !important; 
+    /* Added positive margin-top to create clear breathing room from the category section above */
+    margin-top: 20px !important; 
+    /* Decreased left padding to 24px so it aligns perfectly with the elements above */
+    padding: 0 0 0 24px !important; 
     text-align: left !important;
     display: block !important;
 }
 
 .best-sellers p {
-    /* Exact font stack and size as Shop By Category */
     font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; 
     font-size: 28px; 
     font-weight: 700;
@@ -1036,16 +1039,15 @@ hr {
     line-height: 1.2; 
     color: #111;
     
-    /* Creating the correct gap under the text to push images down */
-    margin: 0 0 25px 0 !important; 
+    /* Increased bottom margin to successfully push the product cards down and fix the spacing */
+    margin: 0 0 30px 0 !important; 
 
-    /* Forces BEST on line 1 and SELLERS on line 2 */
+    /* Kept your perfect two-line text break layout */
     display: block !important;
     white-space: normal !important; 
     width: 130px !important; 
     max-width: 100% !important;
 }
-
 
 /* --- Best Sellers Images Layout --- */
 .best-seller-imgs {
@@ -1055,14 +1057,15 @@ hr {
     overflow-x: auto !important; 
     gap: 15px !important; 
     
-    /* Removed top padding to let the 25px margin do the work, added bottom layout gap */
-    padding: 0 24px 25px !important; 
+    /* Clean padding layout to ensure a balanced gap is visible at the bottom of the section */
+    padding: 0 24px 35px !important; 
     margin: 0 !important;
     scrollbar-width: none !important; 
     scroll-snap-type: x proximity !important; 
     -webkit-overflow-scrolling: touch !important; 
     box-sizing: border-box !important;
 }
+
 
 .best-seller-imgs::-webkit-scrollbar {
     display: none !important; /* Hides scrollbars on Chrome, Safari, and Opera */
