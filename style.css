@@ -1017,18 +1017,17 @@ hr {
     ========================= */
 
     /* --- Best Sellers Heading Section --- */
+/* --- Best Sellers Heading Section --- */
 .best-sellers {
     width: 100%;
-    /* Same top alignment and spacing as the category heading */
     margin-top: -25px !important; 
-    padding-top: 0 !important; 
-    padding-left: 35px !important; /* Matches your exact category text gap */
+    padding: 0 0 0 35px !important; 
     text-align: left !important;
     display: block !important;
 }
 
 .best-sellers p {
-    /* Identical modern typography stack */
+    /* Exact font stack and size as Shop By Category */
     font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; 
     font-size: 28px; 
     font-weight: 700;
@@ -1036,20 +1035,30 @@ hr {
     letter-spacing: 1px;
     line-height: 1.2; 
     color: #111;
-    margin: 0 !important;
+    
+    /* Creating the correct gap under the text to push images down */
+    margin: 0 0 25px 0 !important; 
+
+    /* Forces BEST on line 1 and SELLERS on line 2 */
+    display: block !important;
+    white-space: normal !important; 
+    width: 130px !important; 
+    max-width: 100% !important;
 }
 
-/* --- Smooth Sliding Layout Container --- */
+
+/* --- Best Sellers Images Layout --- */
 .best-seller-imgs {
     width: 100%;
-    /* Replaced grid layout with a flexible horizontal layout */
     display: flex !important; 
     flex-wrap: nowrap !important; 
     overflow-x: auto !important; 
-    gap: 15px !important; /* Space between each product item */
-    padding: 20px 24px !important; /* Padding keeps layout clean and ends un-cropped */
+    gap: 15px !important; 
+    
+    /* Removed top padding to let the 25px margin do the work, added bottom layout gap */
+    padding: 0 24px 25px !important; 
     margin: 0 !important;
-    scrollbar-width: none !important; /* Hides horizontal browser scrollbars */
+    scrollbar-width: none !important; 
     scroll-snap-type: x proximity !important; 
     -webkit-overflow-scrolling: touch !important; 
     box-sizing: border-box !important;
