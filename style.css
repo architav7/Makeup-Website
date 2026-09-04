@@ -1054,7 +1054,7 @@ hr {
 
 /* --- Best Sellers Images Layout --- */
 .best-seller-imgs {
-    margin-top: 25px;
+    margin-top: 50px;
     width: 100%;
     display: flex !important; 
     flex-wrap: nowrap !important; 
