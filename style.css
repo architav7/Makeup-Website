@@ -1016,12 +1016,9 @@ hr {
        BEST SELLERS
     ========================= */
 
-    /* --- Best Sellers Heading Section --- */
-
-
-    /* ==========================================================================
-   BEST SELLERS SECTION (COMPLETE REPLACEMENT)
-   ========================================================================== */
+   /* ==========================================================================
+   BEST SELLERS SECTION (FORCE CSS GRID TRACK REPLACEMENT)
+   ========================================================================= */
 
 /* --- 1. Heading Layout Block --- */
 .best-sellers {
@@ -1033,7 +1030,7 @@ hr {
     display: block !important;
 }
 
-/* --- 2. Typography & 'SHOP NOW' Custom Link --- */
+/* --- 2. Typography Block --- */
 .best-sellers p {
     font-family: 'Playfair Display', 'Didot', 'Georgia', serif; 
     font-size: 34px; 
@@ -1049,51 +1046,44 @@ hr {
     max-width: 100% !important;
 }
 
-/* --- 3. Main Slider Tracking Container --- */
+/* --- 3. Main Slider Container (Forced CSS Grid Layout) --- */
 .best-seller-imgs {
     margin-top: 55px !important; 
     width: 100% !important;
     
-    /* Strict horizontal linear flex layout axis */
-    display: flex !important; 
-    flex-wrap: nowrap !important; 
+    /* --- CHANGED TO GRID: Destroys any dynamic flexbox bugs --- */
+    display: grid !important; 
+    /* Specifies exactly 6 independent columns that cannot shrink or collapse */
+    grid-template-columns: repeat(6, 80vw) !important; 
     
-    /* Forces track viewport to render from the absolute 1st item node */
+    /* Strict overflow setup to enforce dynamic touch-swiping */
     overflow-x: auto !important; 
     overflow-y: hidden !important;
     scroll-behavior: smooth !important;
     
     gap: 16px !important; 
-    padding: 0 24px 35px 24px !important; /* Fixed inner content boundary alignment */
+    padding: 0 24px 35px 24px !important; 
     margin: 0 !important;
     
     -webkit-overflow-scrolling: touch !important; 
-    scroll-snap-type: x mandatory !important; /* Instant snap locking on active column card */
+    scroll-snap-type: x mandatory !important; 
     box-sizing: border-box !important;
     scrollbar-width: none !important; 
-}
-
-/* Fixes trailing margin loss during dynamic overflow scrolling track bounds */
-.best-seller-imgs::after {
-    content: '';
-    padding-right: 1px !important;
 }
 
 .best-seller-imgs::-webkit-scrollbar { 
     display: none !important; 
 }
 
-/* --- 4. Individual Product Grid Cards (All 6 Items Forced Active) --- */
+/* --- 4. Individual Grid Card Layout Fix --- */
 .best-seller-imgs > * {
-    /* Premium viewport width parameters mirroring the screenshot reference */
-    flex: 0 0 82% !important; 
-    width: 82% !important; 
-    max-width: 82% !important;
-    min-width: 82% !important;
+    /* Resets flex overrides completely */
+    flex: none !important; 
     
-    /* STOPS DISAPPEARING: Prevents browser framework engine from dropping initial left elements */
-    flex-shrink: 0 !important; 
-    flex-grow: 0 !important;
+    /* Forces the box item size to strictly use viewport layout bounds */
+    width: 100% !important; 
+    max-width: 100% !important;
+    min-width: 100% !important;
     
     scroll-snap-align: start !important; 
     display: flex !important;
@@ -1107,9 +1097,10 @@ hr {
     height: auto !important;
     aspect-ratio: 1 / 1 !important; 
     object-fit: cover !important;
-    background-color: #f7f4f0; /* Soft luxury off-white panel backing */
+    background-color: #f7f4f0; 
     display: block;
 }
+
 
 
 /* --- Rating Elements --- */
