@@ -1020,20 +1020,17 @@ hr {
 
 .best-sellers {
     width: 100%;
-    margin-top: 5px !important; 
     
-    /* --- FIXED: Removed shorthand conflict --- */
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    padding-right: 0 !important;
+    /* Text ko aur upar le jaane ke liye isse minus (-20px) kar diya hai */
+    margin-top: -20px !important; 
     
-    /* Change only this number to move it left or right. 
-       0px to 5px will bring it to the extreme left */
-    padding-left: 5px !important; 
+    /* Text ko extreme left side edge par chipkane ke liye isse 0px kar diya hai */
+    padding-left: 0px !important; 
     
     text-align: left !important;
     display: block !important;
 }
+
 
 .best-sellers p {
     font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; 
