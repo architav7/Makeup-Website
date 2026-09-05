@@ -676,7 +676,7 @@ hr {
        HEADER
     ========================= */
 
- .header {
+    .header {
     width: 100%;
     position: relative;
     z-index: 10;
@@ -688,42 +688,58 @@ hr {
     box-sizing: border-box;
 }
 
-/* 1. Hamburger Menu: Locked to the absolute far-left edge */
+/* 1. Fixed Menu Container: Cleaned up background tracking noise */
 .nav-bar {
     position: absolute !important;
     left: 18px !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
-    width: 22px !important;
-    height: 14px !important;
+    width: 18px !important; /* Reduced layout width */
+    height: 12px !important; /* Proportional reduced height */
     cursor: pointer;
     z-index: 12;
     pointer-events: auto !important;
-    /* Draws standard 3-line border layout natively */
-    border-top: 2px solid #000000 !important;
-    border-bottom: 2px solid #000000 !important;
-    box-sizing: border-box !important;
+    border: none !important; /* Stripped background bleeding borders */
+    background: transparent !important;
     display: block !important;
 }
 
-/* Middle line helper for the hamburger */
-.nav-bar::before {
+/* Pure CSS Hamburger: Explicitly redrawn with a precise 18px width */
+.nav-bar::before,
+.nav-bar::after {
     content: "";
     position: absolute;
-    top: 4px;
     left: 0;
-    width: 22px;
-    height: 2px;
+    width: 18px !important; /* Reduced line widths */
+    height: 2px !important;
     background: #000000 !important;
 }
 
-/* 2. Brand Branding Block: Shifted left without touching child layout offsets */
+/* Top bar placement */
+.nav-bar::before {
+    top: 0px;
+    box-shadow: 0 5px 0 #000000 !important; /* Dynamically creates the middle bar */
+}
+
+/* Bottom bar placement */
+.nav-bar::after {
+    bottom: 0px;
+}
+
+/* Hide background navigation links text from bleeding through */
+.nav-bar ul, 
+.nav-bar li, 
+.nav-bar a {
+    display: none !important;
+}
+
+/* 2. Logo Branding: Fixed alignment behavior */
 .glamora {
-    text-align: left !important;
+    text-align: center !important; /* Centers inline block children */
     display: flex !important;
     flex-direction: column !important;
-    align-items: flex-start !important;
-    margin-left: 32px !important; /* Fixed spacing right after the hamburger icon */
+    align-items: center !important; /* Centers elements relative to each other */
+    margin-left: 36px !important; /* Clean clearance from the hamburger button */
     margin-right: auto !important;
 }
 
@@ -731,44 +747,51 @@ hr {
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 3px;
-    color: #000000 !important; /* Pure black branding */
+    color: #000000 !important;
     line-height: 1;
+    display: block !important;
 }
 
-/* Keeps your original minor structural alignment indentation completely intact */
+/* Sub-Brand Text: Kept centered underneath "GLAMORA" as per the reference image */
 .glamora small {
     font-size: 9px;
     font-weight: bold;
     letter-spacing: 3px;
-    color: #000000 !important; /* Pure black sub-branding */
-    margin-top: 4px;
+    color: #000000 !important;
+    margin-top: 6px;
+    display: block !important;
+    text-align: center !important;
+    width: 100% !important;
 }
 
-/* 3. Icons Bundle: Restores all 4 items cleanly to the absolute far-right side */
+/* 3. Action Icons Bar: Stripped constraints to restore all 4 items */
 .icons {
     position: absolute !important;
     right: 18px !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
     display: flex !important;
-    align-items: center;
+    align-items: center !important;
     justify-content: flex-end !important;
-    gap: 14px !important; /* Identical fluid spacing layout between all items */
+    gap: 14px !important; /* Consistent padding separation rules */
     width: auto !important;
     padding: 0 !important;
+    margin: 0 !important;
+    pointer-events: auto !important;
 }
 
-/* Enforces solid black color rendering across all custom graphic elements */
+/* Formatting for all 4 inline utility elements */
 .icons img {
     display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
     width: 22px !important;
     height: 22px !important;
     margin: 0 !important;
-    /* Forces heavy pink color filters completely out to display solid deep black */
-    filter: brightness(0) saturate(100%) !important; 
+    filter: brightness(0) saturate(100%) !important; /* Changes all icons to solid deep black */
 }
 
-/* Erases old conflicting margin-left push rules */
+/* Erases old styling overrides pushing icons off-canvas */
 .icons img:nth-child(2),
 .icons img:nth-child(3),
 .icons img:nth-child(4) {
@@ -776,10 +799,7 @@ hr {
     display: block !important;
 }
 
-.nav-bar ul {
-    display: none;
-}
-
+ 
 
 
     /* =========================
