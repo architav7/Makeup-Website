@@ -688,8 +688,7 @@ hr {
     box-sizing: border-box;
 }
 
-/* 1. Hamburger Configuration */
-/* Acts as the absolute tracking point on the left and renders the hamburger shape */
+/* 1. Hamburger Icon Configuration */
 .nav-bar {
     position: absolute !important;
     left: 18px !important;
@@ -703,6 +702,10 @@ hr {
     border: none !important;
     background: transparent !important;
     display: block !important;
+    
+    /* Forces the parent container itself to be visible, just in case */
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
 /* Draws the precise 3-line hamburger menu */
@@ -718,25 +721,25 @@ hr {
 
 .nav-bar::before {
     top: 0px;
-    box-shadow: 0 5px 0 #000000 !important; /* Creates the middle bar */
+    box-shadow: 0 5px 0 #000000 !important;
 }
 
 .nav-bar::after {
     bottom: 0px;
 }
 
-/* Hides the text links inside the dropdown cleanly */
+/* Hides the structural desktop list links cleanly */
 .nav-bar ul {
     display: none !important;
 }
 
-/* 2. Brand Typography Block */
+/* 2. Brand Identity Block */
 .glamora {
     text-align: center !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
-    margin-left: 36px !important; /* Safely clears the hamburger spacing */
+    margin-left: 36px !important; /* Clears the hamburger spacing */
     margin-right: auto !important;
 }
 
@@ -749,7 +752,6 @@ hr {
     display: block !important;
 }
 
-/* Centers the subtext right beneath GLAMORA */
 .glamora small {
     font-size: 9px;
     font-weight: bold;
@@ -761,28 +763,37 @@ hr {
     width: 100% !important;
 }
 
-/* 3. Action Icons Bar Fix */
-/* Breaks out of the parent layout flow to snap cleanly to the absolute far right edge */
-.icons {
-    position: fixed !important; /* Changed to fixed/absolute overrides to escape parent limits */
+/* 3. Action Icons Bar - Ultimate Escape Fix */
+/* Uses viewport-fixed boundaries to force visibility outside of the .nav-bar wrapper */
+.nav-bar .icons {
+    position: absolute !important;
+    
+    /* Calculates positioning relative to the phone display width, completely bypassing parent bounds */
+    left: calc(100vw - 150px) !important; 
     right: 18px !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
+    
+    /* Enforces active displays */
     display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    
     flex-direction: row !important;
     align-items: center !important;
     justify-content: flex-end !important;
-    gap: 14px !important; /* Keeps smooth separation between icons */
+    gap: 14px !important; 
+    
     width: auto !important;
     height: auto !important;
     padding: 0 !important;
     margin: 0 !important;
-    z-index: 99 !important;
+    z-index: 9999 !important;
     pointer-events: auto !important;
 }
 
-/* Formats all four graphics into uniform sizing and deep black styling */
-.icons img {
+/* Ensures each image forces itself into view and renders in pure solid black */
+.nav-bar .icons img {
     display: block !important;
     visibility: visible !important;
     opacity: 1 !important;
@@ -790,18 +801,18 @@ hr {
     height: 22px !important;
     margin: 0 !important;
     padding: 0 !important;
-    /* Erases default pink hue variants completely into clean black */
+    
+    /* Strips any layout-blocking filters and turns icons deep black */
     filter: brightness(0) saturate(100%) !important;
 }
 
-/* Erases old code margin offsets */
-.icons img:nth-child(2),
-.icons img:nth-child(3),
-.icons img:nth-child(4) {
+/* Clears legacy margins */
+.nav-bar .icons img:nth-child(2),
+.nav-bar .icons img:nth-child(3),
+.nav-bar .icons img:nth-child(4) {
     margin-left: 0 !important;
 }
 
-    
  
 
 
