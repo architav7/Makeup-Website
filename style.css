@@ -1137,7 +1137,7 @@ hr {
         display: none !important;
     }
 
-   .best-seller-imgs > * {
+.best-seller-imgs > * {
     flex: 0 0 76vw !important;
     width: 76vw !important;
     max-width: 76vw !important;
@@ -1145,14 +1145,24 @@ hr {
     flex-shrink: 0 !important;
     flex-grow: 0 !important;
     transform: none !important;
-    
-    /* Ensures the card snaps cleanly to the padded starting track line */
-    scroll-snap-align: start !important; 
-    
+    scroll-snap-align: start !important;
     display: flex !important;
     flex-direction: column !important;
     box-sizing: border-box !important;
+    
+    /* ADD THIS LINE: Creates a safe layout boundary inside each card so text never cuts off */
+    padding: 0 8px !important; 
 }
+
+.best-seller-imgs p,
+.best-seller-item p {
+    white-space: normal !important; /* Replaces 'nowrap' to allow safe multi-line text flow if needed */
+    width: 100% !important;
+    margin: 8px 0 4px 0 !important;
+    text-align: left !important;
+    box-sizing: border-box !important;
+}
+
 
 
     .best-seller-imgs img {
