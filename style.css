@@ -266,7 +266,7 @@ body {
     width: 100%;
     
     /* CHANGE: Sets a positive margin-top to push the text downward */
-    margin-top: 20px !important; 
+    margin-top: 40px !important; 
     
     /* CHANGE: Realigns the left position to perfectly match the Category heading */
     padding-left: 35px !important; 
