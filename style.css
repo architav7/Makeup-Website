@@ -1021,88 +1021,85 @@ hr {
    ========================================================================= */
 
 /* --- 1. Heading Layout Block --- */
-/* --- 1. Heading Block Fix --- */
-.best-sellers {
-    width: 100%;
-    margin-top: -15px !important; 
-    padding-left: 0px !important; 
-    margin-left: -20px !important;
-    text-align: left !important;
-    display: block !important;
-}
 
-.best-sellers p {
-    font-family: 'Playfair Display', 'Didot', 'Georgia', serif; 
-    font-size: 34px; 
-    font-weight: 400; 
-    text-transform: capitalize; 
-    letter-spacing: 0px;
-    line-height: 1.1; 
-    color: #1a1a1a;
-    margin: 0 0 30px 0 !important; 
-    display: block !important;
-    white-space: nowrap !important; 
-    width: auto !important; 
-    max-width: 100% !important;
-}
 
-/* --- 2. Main Tracking Container (Resetting Transform & Origin Offset) --- */
-.best-seller-imgs {
-    margin-top: 55px !important; 
-    width: 100% !important;
-    
-    display: flex !important; 
-    flex-wrap: nowrap !important; 
-    overflow-x: auto !important; 
-    overflow-y: hidden !important;
-    scroll-behavior: smooth !important;
-    
-    gap: 16px !important; 
-    padding: 0 24px 35px 24px !important; 
-    margin: 0 !important;
-    
-    -webkit-overflow-scrolling: touch !important; 
-    scroll-snap-type: x mandatory !important; 
-    box-sizing: border-box !important;
-    scrollbar-width: none !important; 
-    
-    /* --- THE CRITICAL FIX: Destroys hidden frame shifting --- */
-    transform: none !important; 
-    justify-content: flex-start !important; /* Forces layout to boot strictly from item 1 */
-}
+.best-sellers { 
+  width: 100%; 
+  margin-top: -15px !important; 
+  /* CHANGE: Add left padding to keep text safely inside the viewport */
+  padding-left: 24px !important; 
+  /* CHANGE: Reset negative margin to prevent the content from clipping left */
+  margin-left: 0px !important; 
+  text-align: left !important; 
+  display: block !important; 
+  box-sizing: border-box !important;
+} 
+
+.best-sellers p { 
+  font-family: 'Playfair Display', 'Didot', 'Georgia', serif; 
+  font-size: 34px; 
+  font-weight: 400; 
+  text-transform: capitalize; 
+  letter-spacing: 0px; 
+  line-height: 1.1; 
+  color: #1a1a1a; 
+  margin: 0 0 30px 0 !important; 
+  display: block !important; 
+  white-space: nowrap !important; 
+  width: auto !important; 
+  max-width: 100% !important; 
+} 
+
+/* --- 2. Main Tracking Container --- */ 
+.best-seller-imgs { 
+  margin-top: 55px !important; 
+  width: 100% !important; 
+  display: flex !important; 
+  flex-wrap: nowrap !important; 
+  overflow-x: auto !important; 
+  overflow-y: hidden !important; 
+  scroll-behavior: smooth !important; 
+  gap: 16px !important; 
+  /* Aligns perfectly with the 24px padding introduced above */
+  padding: 0 24px 35px 24px !important; 
+  margin: 0 !important; 
+  -webkit-overflow-scrolling: touch !important; 
+  scroll-snap-type: x mandatory !important; 
+  box-sizing: border-box !important; 
+  scrollbar-width: none !important; 
+  transform: none !important; 
+  justify-content: flex-start !important; 
+} 
 
 .best-seller-imgs::-webkit-scrollbar { 
-    display: none !important; 
+  display: none !important; 
+} 
+
+/* --- 3. Individual Cards --- */ 
+.best-seller-imgs > * { 
+  flex: 0 0 76vw !important; 
+  width: 76vw !important; 
+  max-width: 76vw !important; 
+  min-width: 76vw !important; 
+  flex-shrink: 0 !important; 
+  flex-grow: 0 !important; 
+  transform: none !important; 
+  scroll-snap-align: start !important; 
+  display: flex !important; 
+  flex-direction: column !important; 
+  box-sizing: border-box !important; 
+} 
+
+/* --- 4. Images Fix --- */ 
+.best-seller-imgs img { 
+  width: 100% !important; 
+  height: auto !important; 
+  aspect-ratio: 1 / 1 !important; 
+  object-fit: cover !important; 
+  background-color: #f7f4f0; 
+  display: block; 
 }
 
-/* --- 3. Individual Cards (Exact Viewport Math to prevent cutting) --- */
-.best-seller-imgs > * {
-    /* Using 76vw width + 16px gaps prevents the next card from being cut clumsily */
-    flex: 0 0 76vw !important; 
-    width: 76vw !important; 
-    max-width: 76vw !important;
-    min-width: 76vw !important;
-    
-    /* Strict rendering instructions */
-    flex-shrink: 0 !important; 
-    flex-grow: 0 !important;
-    transform: none !important;
-    
-    scroll-snap-align: start !important; 
-    display: flex !important;
-    flex-direction: column !important;
-    box-sizing: border-box !important;
-}
-
-/* --- 4. Images Fix --- */
-.best-seller-imgs img {
-    width: 100% !important;
-    height: auto !important;
-    aspect-ratio: 1 / 1 !important; 
-    object-fit: cover !important;
-    background-color: #f7f4f0; 
-    display: block;
-}
 
 
 
