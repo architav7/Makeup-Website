@@ -676,108 +676,104 @@ hr {
        HEADER
     ========================= */
 
-    .header {
+ .header {
     width: 100%;
     position: relative;
     z-index: 10;
     background-color: #ffffff;
-    padding: 15px 18px !important; /* Balanced screen edge spacing */
-    min-height: 50px;
+    padding: 15px 18px !important;
+    min-height: 60px;
     display: flex;
     align-items: center;
     box-sizing: border-box;
 }
 
-/* Forces the logo to the left and colors it black */
+/* 1. Hamburger Menu: Locked to the absolute far-left edge */
+.nav-bar {
+    position: absolute !important;
+    left: 18px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    width: 22px !important;
+    height: 14px !important;
+    cursor: pointer;
+    z-index: 12;
+    pointer-events: auto !important;
+    /* Draws standard 3-line border layout natively */
+    border-top: 2px solid #000000 !important;
+    border-bottom: 2px solid #000000 !important;
+    box-sizing: border-box !important;
+    display: block !important;
+}
+
+/* Middle line helper for the hamburger */
+.nav-bar::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 22px;
+    height: 2px;
+    background: #000000 !important;
+}
+
+/* 2. Brand Branding Block: Shifted left without touching child layout offsets */
 .glamora {
     text-align: left !important;
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
     align-items: flex-start !important;
-    order: 2; /* Positions it right after the hamburger */
-    margin-right: auto; /* Pushes the remaining action icons to the far right */
+    margin-left: 32px !important; /* Fixed spacing right after the hamburger icon */
+    margin-right: auto !important;
 }
 
 .glamora span {
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 3px;
-    color: #000000 !important; /* Turned text back to solid black */
+    color: #000000 !important; /* Pure black branding */
     line-height: 1;
 }
 
+/* Keeps your original minor structural alignment indentation completely intact */
 .glamora small {
     font-size: 9px;
     font-weight: bold;
     letter-spacing: 3px;
-    color: #000000 !important; /* Turned text back to solid black */
-    margin-top: 2px;
+    color: #000000 !important; /* Pure black sub-branding */
+    margin-top: 4px;
 }
 
-/* Converts container into a static flex item */
-.nav-bar {
-    position: static !important;
-    width: auto !important;
-    transform: none !important;
-    pointer-events: auto !important;
-    order: 1; /* Pushes this element to the absolute first position on the left */
-}
-
-/* Aligns items smoothly to the right edge */
+/* 3. Icons Bundle: Restores all 4 items cleanly to the absolute far-right side */
 .icons {
+    position: absolute !important;
+    right: 18px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
     display: flex !important;
     align-items: center;
     justify-content: flex-end !important;
-    padding: 0 !important;
+    gap: 14px !important; /* Identical fluid spacing layout between all items */
     width: auto !important;
-    gap: 14px; /* Perfectly equal gap between the right-side icons */
-    order: 3; /* Keeps them grouped on the far right */
+    padding: 0 !important;
 }
 
-/* Removes the heavy pink filter tint to display natural black */
+/* Enforces solid black color rendering across all custom graphic elements */
 .icons img {
-    width: 22px;
-    height: 22px;
+    display: block !important;
+    width: 22px !important;
+    height: 22px !important;
     margin: 0 !important;
-    filter: none !important; /* Restores default icon look */
+    /* Forces heavy pink color filters completely out to display solid deep black */
+    filter: brightness(0) saturate(100%) !important; 
 }
 
-/* --- The Pure CSS Hamburger Trick --- */
-/* Hijacks the 2nd image item slot to natively draw a 3-line hamburger bar */
-.icons img:nth-child(2) {
-    display: block;
-    width: 22px;
-    height: 2px;
-    background: #000000;
-    position: relative;
-    content: "";
-    order: -1; /* Shifts this specific item out of the right cluster to the far left */
-    margin-right: 8px !important; /* Clean clearance space before the logo text begins */
-}
-
-/* Generates upper and lower secondary menu bars */
-.icons img:nth-child(2)::before,
-.icons img:nth-child(2)::after {
-    content: "";
-    position: absolute;
-    width: 22px;
-    height: 2px;
-    background: #000000;
-    left: 0;
-}
-
-.icons img:nth-child(2)::before {
-    top: -6px;
-}
-
-.icons img:nth-child(2)::after {
-    top: 6px;
-}
-
-/* Wipes away conflicting old margin offsets */
+/* Erases old conflicting margin-left push rules */
+.icons img:nth-child(2),
 .icons img:nth-child(3),
 .icons img:nth-child(4) {
     margin-left: 0 !important;
+    display: block !important;
 }
 
 .nav-bar ul {
