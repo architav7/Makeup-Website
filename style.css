@@ -672,13 +672,6 @@ hr {
         transform: translateX(40px);
     }
 
-    .free-shipping,
-    .first-order,
-    .help,
-    .track {
-        color: #d04c64;
-    }
-
 
     /* =========================
        HEADER
