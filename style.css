@@ -1109,42 +1109,51 @@ hr {
 }
 
 
-    .best-seller-imgs {
-        margin-top: 15px !important; /* Fixed oversized layout gap tracking values */
-        width: 100% !important;
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        overflow-y: hidden !important;
-        scroll-behavior: smooth !important;
-        gap: 16px !important;
-        padding: 0 24px 35px 24px !important;
-        margin: 0 !important;
-        -webkit-overflow-scrolling: touch !important;
-        scroll-snap-type: x mandatory !important;
-        box-sizing: border-box !important;
-        scrollbar-width: none !important;
-        transform: none !important;
-        justify-content: flex-start !important;
-    }
+  .best-seller-imgs {
+    margin-top: 15px !important; 
+    width: 100% !important;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    scroll-behavior: smooth !important;
+    gap: 16px !important;
+    
+    /* CHANGE: Sets uniform horizontal padding to ensure the first item isn't clipped by the viewport */
+    padding: 0 24px 35px 24px !important; 
+    margin: 0 !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-snap-type: x mandatory !important;
+    box-sizing: border-box !important;
+    scrollbar-width: none !important;
+    transform: none !important;
+    
+    /* CHANGE: Re-enforces layout initialization from the absolute left border track boundary */
+    justify-content: flex-start !important; 
+}
+
 
     .best-seller-imgs::-webkit-scrollbar {
         display: none !important;
     }
 
-    .best-seller-imgs>* {
-        flex: 0 0 76vw !important;
-        width: 76vw !important;
-        max-width: 76vw !important;
-        min-width: 76vw !important;
-        flex-shrink: 0 !important;
-        flex-grow: 0 !important;
-        transform: none !important;
-        scroll-snap-align: start !important;
-        display: flex !important;
-        flex-direction: column !important;
-        box-sizing: border-box !important;
-    }
+   .best-seller-imgs > * {
+    flex: 0 0 76vw !important;
+    width: 76vw !important;
+    max-width: 76vw !important;
+    min-width: 76vw !important;
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+    transform: none !important;
+    
+    /* Ensures the card snaps cleanly to the padded starting track line */
+    scroll-snap-align: start !important; 
+    
+    display: flex !important;
+    flex-direction: column !important;
+    box-sizing: border-box !important;
+}
+
 
     .best-seller-imgs img {
         width: 100% !important;
