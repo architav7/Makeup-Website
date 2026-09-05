@@ -263,14 +263,18 @@ body {
 }
 
 .best-sellers {
-    font-weight: bold;
-    color: black;
-    font-size: 18px;
-    position: relative;
-    top: 30px;
-    left: 62px;
-
+    width: 100%;
+    margin-top: -35px !important;
+    
+    /* Edit these two lines right here */
+    padding-left: 0px !important;
+    margin-left: -12px !important; 
+    
+    text-align: left !important;
+    display: block !important;
+    box-sizing: border-box !important;
 }
+
 
 .best-seller-imgs {
     display: flex;
@@ -1421,3 +1425,4 @@ hr {
         height: auto;
         display: block !important;
     }
+}
