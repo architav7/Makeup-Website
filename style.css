@@ -1088,19 +1088,22 @@ hr {
     }
 
     .best-sellers p {
-        font-family: 'Playfair Display', 'Didot', 'Georgia', serif;
-        font-size: 34px;
-        font-weight: 400;
-        text-transform: capitalize;
-        letter-spacing: 0px;
-        line-height: 1.1;
-        color: #1a1a1a;
-        margin: 0 0 20px 0 !important;
-        display: block !important;
-        white-space: nowrap !important;
-        width: auto !important;
-        max-width: 100% !important;
-    }
+    font-family: 'Playfair Display', 'Didot', 'Georgia', serif;
+    font-size: 34px;
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 0px;
+    line-height: 1.1;
+    color: #1a1a1a;
+    margin: 0 0 30px 0 !important;
+    display: block !important;
+    
+    /* Edit these two lines below */
+    white-space: normal !important; 
+    width: 150px !important; /* Forces the word "Sellers" onto the next line */
+    max-width: 100% !important;
+}
+
 
     .best-seller-imgs {
         margin-top: 15px !important; /* Fixed oversized layout gap tracking values */
