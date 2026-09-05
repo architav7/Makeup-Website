@@ -769,8 +769,7 @@ hr {
     position: absolute !important;
     
     /* Calculates positioning relative to the phone display width, completely bypassing parent bounds */
-    left: calc(100vw - 150px) !important; 
-    right: 18px !important;
+    right: 15px !important;
     top: 50% !important;
     transform: translateY(-50%) !important;
     
