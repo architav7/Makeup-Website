@@ -999,20 +999,23 @@ hr {
     box-sizing: border-box !important;
 }
 
-    .category p {
-    font-family: 'Playfair Display', 'Didot', 'Georgia', serif; /* Changed font to match Best Sellers */
-    font-size: 34px; /* Increased from 20px to match Best Sellers exactly */
+   .category p {
+    font-family: 'Playfair Display', 'Didot', 'Georgia', serif; 
+    font-size: 34px; 
     font-weight: 400;
-    text-transform: capitalize; /* Changed from uppercase to look clean like Best Sellers */
+    text-transform: capitalize; 
     letter-spacing: 0px;
     line-height: 1.1;
     color: #1a1a1a;
     margin: 0 0 20px 0 !important;
     display: block !important;
-    white-space: nowrap !important; 
-    width: auto !important;         
+    
+    /* Edit these two lines below */
+    white-space: normal !important; 
+    width: 200px !important;         
     max-width: 100% !important;
 }
+
 
 
     .category-images {
