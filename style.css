@@ -991,7 +991,7 @@ hr {
 
     .category {
     width: 100%;
-    margin-top: -10px !important;
+    margin-top: -20px !important;
     padding-left: 24px !important; /* Changed from 20px to 24px to match Best Sellers perfectly */
     margin-left: 0px !important;
     text-align: left !important;
