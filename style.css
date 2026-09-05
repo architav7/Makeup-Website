@@ -1000,19 +1000,20 @@ hr {
     }
 
     .category p {
-        font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-        font-size: 20px; /* Elegant smaller heading font footprint */
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        line-height: 1.2;
-        color: #111;
-        margin: 0 !important;
-        display: block !important;
-        white-space: nowrap !important; /* Prevents title word from wrapping down clunkily */
-        width: auto !important;         /* Stripped away the 160px width restriction */
-        max-width: 100% !important;
-    }
+    font-family: 'Playfair Display', 'Didot', 'Georgia', serif; /* Changed font to match Best Sellers */
+    font-size: 34px; /* Increased from 20px to match Best Sellers exactly */
+    font-weight: 400;
+    text-transform: capitalize; /* Changed from uppercase to look clean like Best Sellers */
+    letter-spacing: 0px;
+    line-height: 1.1;
+    color: #1a1a1a;
+    margin: 0 0 20px 0 !important;
+    display: block !important;
+    white-space: nowrap !important; 
+    width: auto !important;         
+    max-width: 100% !important;
+}
+
 
     .category-images {
         width: 100%;
@@ -1031,17 +1032,17 @@ hr {
         display: none !important;
     }
 
-    .category-item {
-        flex: 0 0 28% !important; /* Scaled down width so elements look like elegant small circles */
-        width: 28% !important;
-        scroll-snap-align: start;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        box-sizing: border-box !important;
-        padding: 0 !important;
-    }
+   .category-item {
+    flex: 0 0 42% !important; /* Increased width significantly to make them big and beautiful */
+    width: 42% !important;
+    scroll-snap-align: start;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-sizing: border-box !important;
+    padding: 0 5px !important; /* Added safe padding so the round borders do not touch the screen boundaries and cut */
+}
 
     .category-item img {
         width: 100% !important;
