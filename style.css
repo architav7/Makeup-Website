@@ -615,7 +615,6 @@ hr {
 
         padding: 0;
         box-sizing: border-box;
-        border-bottom: 1px ;
     }
 
     /* FIRST ROW */
@@ -678,82 +677,112 @@ hr {
     ========================= */
 
     .header {
-        width: 100%;
-        position: relative;
-        z-index: 10;
-        background-color: #ffffff;
-        padding: 15px 0;
-        min-height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    background-color: #ffffff;
+    padding: 15px 18px !important; /* Balanced screen edge spacing */
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
 
-    .glamora {
-        text-align: center;
-        color: #d04c64;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+/* Forces the logo to the left and colors it black */
+.glamora {
+    text-align: left !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start !important;
+    order: 2; /* Positions it right after the hamburger */
+    margin-right: auto; /* Pushes the remaining action icons to the far right */
+}
 
-    .glamora span {
-        font-size: 24px;
-        font-weight: bold;
-        letter-spacing: 3px;
-        color: #d04c64;
-    }
+.glamora span {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #000000 !important; /* Turned text back to solid black */
+    line-height: 1;
+}
 
-    .glamora small {
-        font-size: 9px;
-        font-weight: bold;
-        letter-spacing: 3px;
-        color: #d04c64;
-        margin-top: 2px;
-    }
+.glamora small {
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    color: #000000 !important; /* Turned text back to solid black */
+    margin-top: 2px;
+}
 
-    .nav-bar {
-        position: absolute;
-        width: 100%;
-        left: 0;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        pointer-events: none;
-        box-sizing: border-box;
-    }
+/* Converts container into a static flex item */
+.nav-bar {
+    position: static !important;
+    width: auto !important;
+    transform: none !important;
+    pointer-events: auto !important;
+    order: 1; /* Pushes this element to the absolute first position on the left */
+}
 
+/* Aligns items smoothly to the right edge */
+.icons {
+    display: flex !important;
+    align-items: center;
+    justify-content: flex-end !important;
+    padding: 0 !important;
+    width: auto !important;
+    gap: 14px; /* Perfectly equal gap between the right-side icons */
+    order: 3; /* Keeps them grouped on the far right */
+}
 
-    .nav-bar ul {
-        display: none;
-    }
+/* Removes the heavy pink filter tint to display natural black */
+.icons img {
+    width: 22px;
+    height: 22px;
+    margin: 0 !important;
+    filter: none !important; /* Restores default icon look */
+}
 
-    .icons {
-        display: flex;
-        justify-content: space-between;
-        padding: 0 18px;
-        box-sizing: border-box;
-        width: 100%;
-        pointer-events: auto;
-    }
+/* --- The Pure CSS Hamburger Trick --- */
+/* Hijacks the 2nd image item slot to natively draw a 3-line hamburger bar */
+.icons img:nth-child(2) {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: #000000;
+    position: relative;
+    content: "";
+    order: -1; /* Shifts this specific item out of the right cluster to the far left */
+    margin-right: 8px !important; /* Clean clearance space before the logo text begins */
+}
 
-    .icons img {
-        width: 22px;
-        height: 22px;
-        filter: invert(41%) sepia(35%) saturate(1313%) hue-rotate(311deg) brightness(89%) contrast(90%) !important;
-    }
+/* Generates upper and lower secondary menu bars */
+.icons img:nth-child(2)::before,
+.icons img:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 2px;
+    background: #000000;
+    left: 0;
+}
 
-    .icons img:nth-child(2) {
-        margin-left: 12px;
-    }
+.icons img:nth-child(2)::before {
+    top: -6px;
+}
 
-    .icons img:nth-child(3) {
-        margin-left: auto;
-    }
+.icons img:nth-child(2)::after {
+    top: 6px;
+}
 
-    .icons img:nth-child(4) {
-        margin-left: 12px;
-    }
+/* Wipes away conflicting old margin offsets */
+.icons img:nth-child(3),
+.icons img:nth-child(4) {
+    margin-left: 0 !important;
+}
+
+.nav-bar ul {
+    display: none;
+}
 
 
 
