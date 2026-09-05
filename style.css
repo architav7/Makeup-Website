@@ -990,14 +990,14 @@ hr {
     ========================= */
 
     .category {
-        width: 100%;
-        margin-top: 25px !important; /* Fixes layout overlapping */
-        padding-top: 0 !important;
-        padding-left: 20px !important; /* Clean margin from left screen edge */
-        text-align: left !important;
-        display: block !important;
-        box-sizing: border-box !important;
-    }
+    width: 100%;
+    margin-top: 25px !important;
+    padding-left: 24px !important; /* Changed from 20px to 24px to match Best Sellers perfectly */
+    margin-left: 0px !important;
+    text-align: left !important;
+    display: block !important;
+    box-sizing: border-box !important;
+}
 
     .category p {
     font-family: 'Playfair Display', 'Didot', 'Georgia', serif; /* Changed font to match Best Sellers */
@@ -1016,32 +1016,38 @@ hr {
 
 
     .category-images {
-        width: 100%;
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        overflow-x: auto !important;
-        gap: 15px !important;
-        padding: 20px !important;
-        scrollbar-width: none !important;
-        scroll-snap-type: x proximity !important;
-        -webkit-overflow-scrolling: touch !important;
-        box-sizing: border-box !important;
-    }
+    width: 100%;
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    gap: 16px !important;
+    padding: 0 24px 35px 24px !important; /* Matches Best Sellers padding to stop cuts on the left side */
+    margin: 0 !important;
+    -webkit-overflow-scrolling: touch !important;
+    scroll-snap-type: x mandatory !important;
+    box-sizing: border-box !important;
+    scrollbar-width: none !important;
+    transform: none !important;
+    justify-content: flex-start !important; /* Forces layout to start from the absolute first item */
+}
 
     .category-images::-webkit-scrollbar {
         display: none !important;
     }
 
-   .category-item {
-    flex: 0 0 42% !important; /* Increased width significantly to make them big and beautiful */
-    width: 42% !important;
-    scroll-snap-align: start;
+.category-item {
+    flex: 0 0 76vw !important;  /* Increased to 76vw to be exactly as big as the Best Sellers cards */
+    width: 76vw !important;
+    max-width: 76vw !important;
+    min-width: 76vw !important;
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+    transform: none !important;
+    scroll-snap-align: start !important;
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
     box-sizing: border-box !important;
-    padding: 0 5px !important; /* Added safe padding so the round borders do not touch the screen boundaries and cut */
+    padding: 0 !important;
 }
 
     .category-item img {
