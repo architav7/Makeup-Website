@@ -265,13 +265,11 @@ body {
 .best-sellers {
     width: 100%;
     
-    /* CHANGE: Sets a positive margin-top to push the text downward */
-    margin-top: 40px !important; 
+    /* Removed margin-top completely */
+    padding-top: 45px !important; 
     
-    /* CHANGE: Realigns the left position to perfectly match the Category heading */
     padding-left: 35px !important; 
     margin-left: 0px !important; 
-    
     text-align: left !important;
     display: block !important;
     box-sizing: border-box !important;
