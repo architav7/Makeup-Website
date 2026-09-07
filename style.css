@@ -49,21 +49,26 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 260px;
 }
 
 .glamora span {
     display: block;
-    font-size: 32px;
-    letter-spacing: 3px;
+    font-size: 38px;
+    letter-spacing: 0.18em;
+    line-height: 0.9;
     text-align: center;
+    width: 100%;
+    font-weight: 700;
 }
 
 .glamora small {
     display: block;
-    font-size: 10px;
-    letter-spacing: 4px;
+    font-size: 12px;
+    letter-spacing: 0.38em;
     text-align: center;
-    margin-top: 2px;
+    margin-top: 4px;
+    width: 100%;
 }
 
 .nav-bar {
