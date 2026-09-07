@@ -1080,10 +1080,6 @@ hr {
        BEST SELLERS
     ========================= */
 
-    /* =========================
-       BEST SELLERS
-    ========================= */
-
     .best-sellers {
         width: 100%;
         margin-top: -35px !important;
@@ -1119,7 +1115,7 @@ hr {
         scroll-behavior: smooth !important;
         gap: 16px !important;
         
-        /* FIXED: Retained balanced outer boundaries for smooth scrolling track initialization */
+        /* FIXED: Retained safe padding track boundaries */
         padding: 0 20px 35px 20px !important; 
         margin: 0 !important;
         -webkit-overflow-scrolling: touch !important;
@@ -1134,12 +1130,12 @@ hr {
         display: none !important;
     }
 
-    /* FIXED: Sets a perfectly matched width size so ALL items are completely identical */
+    /* FIXED: Adjusted to 68vw to make the images properly large and well-proportioned */
     .best-seller-item {
-        flex: 0 0 46vw !important;
-        width: 46vw !important;
-        max-width: 46vw !important;
-        min-width: 46vw !important;
+        flex: 0 0 68vw !important;
+        width: 68vw !important;
+        max-width: 68vw !important;
+        min-width: 68vw !important;
         scroll-snap-align: start !important;
         display: block !important; 
         box-sizing: border-box !important;
