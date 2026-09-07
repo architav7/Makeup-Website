@@ -1296,7 +1296,7 @@ hr {
     .brand {
         grid-column: 1;
         grid-row: 1;
-        transform: translateX(-8px);
+        transform: none;
     }
 
     .brand-logo {
@@ -1304,6 +1304,7 @@ hr {
         font-weight: bold;
         letter-spacing: 3px;
         color: #000000;
+        padding-left: 0 !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: flex-start !important;
@@ -1316,11 +1317,13 @@ hr {
         letter-spacing: 3px;
         color: #000000;
         margin-top: 4px;
+        margin-left: 0 !important;
     }
 
     .brand-description {
         width: 100% !important;
         max-width: 260px;
+        padding-left: 0 !important;
         font-size: 10px;
         line-height: 1.5;
     }
@@ -1332,6 +1335,7 @@ hr {
     .social-icons img {
         height: 20px;
         width: auto;
+        padding-left: 0 !important;
     }
 
     .shop ul,
@@ -1351,7 +1355,7 @@ hr {
     .customer-care {
         grid-column: 1;
         grid-row: 2;
-        transform: translateX(8px);
+        transform: none;
     }
 
     .about-us {
