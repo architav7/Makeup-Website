@@ -438,30 +438,28 @@ hr {
 }
 
 .brand-logo {
-    padding-top: 0;
-    font-size: 30px;
-    font-weight: 700;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 32px;
     letter-spacing: 3px;
-    padding-left: 0;
-    margin-left: 0;
     line-height: 1;
+    font-weight: 700;
+    color: #111;
     text-transform: uppercase;
-    text-align: left;
 }
 
 .brand-logo small {
     display: block;
     font-size: 10px;
     letter-spacing: 4px;
-    margin-top: 4px;
-    margin-left: 0;
-    text-transform: uppercase;
-    text-align: left;
-}
-
-.brand-logo,
-.brand-logo small {
     color: #111;
+    margin-top: 2px;
+    text-transform: uppercase;
+    text-align: center;
 }
 
 .brand-description {
