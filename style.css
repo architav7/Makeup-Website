@@ -1257,6 +1257,7 @@ hr {
     .subscribe button {
         width: 100% !important;
         height: 46px;
+        transform: translateX(8px);
         background-color: #000000 !important; 
         color: #ffffff !important;
         font-size: 13px;
@@ -1295,6 +1296,7 @@ hr {
     .brand {
         grid-column: 1;
         grid-row: 1;
+        transform: translateX(-8px);
     }
 
     .brand-logo {
@@ -1349,6 +1351,7 @@ hr {
     .customer-care {
         grid-column: 1;
         grid-row: 2;
+        transform: translateX(8px);
     }
 
     .about-us {
