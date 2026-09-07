@@ -1199,7 +1199,7 @@ hr {
     }
 
 
-    /* =========================
+   /* =========================
        NEWSLETTER
     ========================= */
 
@@ -1209,58 +1209,75 @@ hr {
         flex-direction: column !important;
         align-items: center;
         
-        /* FIXED: Reduced top padding so it shifts directly up into the pink boundary zone */
-        padding: 10px 24px 40px 24px !important; 
-        gap: 16px;
+        /* FIXED: Negative margin pulls the entire section smoothly up over the pink box */
+        margin-top: -60px !important; 
+        padding: 20px 24px 30px 24px !important; 
+        gap: 12px !important;
         box-sizing: border-box;
         text-align: center;
         
-        /* FIXED: Changed background color to match your layout's pink container background shade */
-        background-color: #f7f4f0 !important; 
+        /* FIXED: Set to transparent so it naturally absorbs the pink color from behind it */
+        background-color: transparent !important; 
     }
 
     .newsletter-text {
         width: 100% !important;
+        margin-bottom: 4px !important;
     }
 
     .newsletter-text h3 {
         font-size: 16px;
+        margin: 0 0 4px 0 !important;
     }
 
     .newsletter-text p {
         font-size: 10px;
+        margin: 0 !important;
     }
 
+    /* FIXED: This now acts as the compact container box for your form inputs */
     .email-box {
-        width: 100% !important;
+        width: 90% !important;
+        max-width: 340px !important;
+        background: #ffffff !important;
+        border: 1px solid #dcdcdc !important; 
+        padding: 4px !important;
+        box-sizing: border-box !important;
+        border-radius: 4px !important;
     }
 
     .email-box input {
         width: 100% !important;
-        height: 46px; 
+        height: 42px !important; 
         font-size: 13px;
-        padding: 0 14px;
-        border: 1px solid #dcdcdc !important; 
+        padding: 0 10px !important;
+        border: none !important; /* Removes harsh double borders inside the box */
         box-sizing: border-box !important;
-        background: #ffffff !important;
+        background: transparent !important;
     }
 
+    /* FIXED: Centers and shrinks the subscribe button directly underneath the input box */
     .subscribe {
-        width: 100% !important;
-        margin-top: 4px;
+        width: auto !important;
+        min-width: 140px !important;
+        max-width: 180px !important;
+        margin-top: 4px !important;
     }
 
     .subscribe button {
         width: 100% !important;
-        height: 46px;
+        height: 38px !important; /* Slightly shorter and scaled down */
         background-color: #000000 !important; 
         color: #ffffff !important;
-        font-size: 13px;
+        font-size: 12px !important;
         font-weight: bold;
         border: none !important;
+        border-radius: 4px !important;
         cursor: pointer;
         letter-spacing: 1px;
+        padding: 0 20px !important;
     }
+
 
 
     /* =========================
