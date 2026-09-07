@@ -439,22 +439,29 @@ hr {
 
 .brand-logo {
     padding-top: 0;
-    font-size: clamp(2.3rem, 2.2vw, 3.4rem);
+    font-size: 30px;
     font-weight: 700;
-    letter-spacing: 0.12em;
+    letter-spacing: 3px;
     padding-left: 0;
     margin-left: 0;
-    line-height: 0.9;
+    line-height: 1;
     text-transform: uppercase;
+    text-align: left;
 }
 
 .brand-logo small {
     display: block;
-    font-size: 0.5em;
-    letter-spacing: 0.38em;
-    margin-top: 6px;
+    font-size: 10px;
+    letter-spacing: 4px;
+    margin-top: 4px;
     margin-left: 0;
     text-transform: uppercase;
+    text-align: left;
+}
+
+.brand-logo,
+.brand-logo small {
+    color: #111;
 }
 
 .brand-description {
@@ -777,6 +784,20 @@ hr {
         display: block !important;
         text-align: center !important;
         width: 100% !important;
+    }
+
+    .brand-logo {
+        font-size: 24px;
+        letter-spacing: 3px;
+        line-height: 1;
+        text-align: left;
+    }
+
+    .brand-logo small {
+        font-size: 9px;
+        letter-spacing: 3px;
+        margin-top: 4px;
+        text-align: left;
     }
 
     /* 3. Action Icons Bar - Ultimate Escape Fix */
