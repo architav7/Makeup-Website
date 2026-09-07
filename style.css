@@ -947,77 +947,6 @@ hr {
 
 
 
-    /* =========================
-       FEATURE TABS
-    ========================= */
-
-    /* TABS */
-
-    .tab {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 4px;
-        flex: 1;
-        min-width: 0;
-        margin: 0 auto !important;
-        text-align: center;
-    }
-
-    .tabs {
-        width: 100% !important;
-        position: relative !important;
-        /* ज़बरदस्ती एब्सोल्यूट से नॉर्मल करेगा */
-        top: auto !important;
-        /* पुरानी सारी कैलकुलेशन हटा देगा */
-        left: 0 !important;
-        transform: none !important;
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        justify-content: space-between !important;
-        align-items: center !important;
-        background-color: #ffffff !important;
-        padding: 12px 10px !important;
-        box-sizing: border-box !important;
-        margin-top: 40px !important;
-        /* कैटगरी सेक्शन से नीचे दूरी बनाएगा */
-        margin-bottom: 20px !important;
-        /* काले बार के ठीक ऊपर सेट करेगा */
-    }
-
-    .tab:not(:last-child) {
-        border-right: 1px solid #ddd;
-    }
-
-    .tab img {
-        width: 14px;
-        /* Slightly smaller icons to save space */
-        height: 14px;
-        flex-shrink: 0;
-        object-fit: contain;
-    }
-
-    .tab-text {
-        display: flex;
-        flex-direction: column;
-        min-width: 0;
-    }
-
-    .tab-text span {
-        font-size: 7px;
-        /* 3. Made smaller to guarantee fitment inside borders */
-        font-weight: bold;
-        line-height: 1.1;
-        white-space: nowrap;
-    }
-
-    .tab-text small {
-        font-size: 5.5px;
-        /* Made smaller to guarantee fitment inside borders */
-        color: #666;
-        line-height: 1.1;
-        white-space: nowrap;
-    }
 
     /* =========================
        SHOP BY CATEGORY
@@ -1424,44 +1353,71 @@ hr {
     ========================= */
 
     .tabs {
-        width: 100%;
+        width: 100% !important;
         display: flex !important;
-        flex-direction: row !important; /* Locks structural icons side by side */
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
         justify-content: space-between !important;
-        padding: 24px 16px !important;
+        align-items: center !important;
+        padding: 16px 6px !important;
         background-color: #fcfbf9 !important;
-        box-sizing: border-box;
-        border-top: 1px solid #eaeaea;
-        border-bottom: 1px solid #eaeaea;
+        box-sizing: border-box !important;
+        border-top: 1px solid #eaeaea !important;
+        border-bottom: 1px solid #eaeaea !important;
         margin-top: 0 !important;
         margin-bottom: 0 !important;
     }
 
     .tab {
         display: flex !important;
-        flex-direction: column !important;
+        flex-direction: row !important; /* Icon on left, text on right - exactly like screenshot 2 */
         align-items: center !important;
-        text-align: center !important;
-        flex: 1;
+        justify-content: center !important;
+        gap: 5px !important;
+        flex: 1 1 0 !important;
+        min-width: 0 !important;
+        padding: 0 4px !important;
+        text-align: left !important;
+        border-right: 1px solid #e0e0e0 !important; /* Divider line between items */
+    }
+
+    .tab:last-child {
+        border-right: none !important;
     }
 
     .tab img {
-        width: 24px !important; /* Restricts giant icon bug from blowing up bounds */
-        height: 24px !important;
-        margin-bottom: 8px !important;
+        width: clamp(15px, 3.8vw, 20px) !important;
+        height: clamp(15px, 3.8vw, 20px) !important;
+        flex-shrink: 0 !important;
         object-fit: contain !important;
+        margin: 0 !important;
+    }
+
+    .tab-text {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        min-width: 0 !important;
+        gap: 2px !important;
     }
 
     .tab-text span {
-        font-size: 9px !important;
+        font-size: clamp(6.2px, 1.7vw, 9px) !important;
         font-weight: 700 !important;
+        color: #1a1a1a !important;
+        line-height: 1.15 !important;
+        white-space: nowrap !important;
+        letter-spacing: 0.2px !important;
         display: block !important;
-        letter-spacing: 0.5px;
-        color: #1a1a1a;
     }
 
     .tab-text small {
-        display: none !important; /* Hides long paragraphs to fit thin screen breakpoints */
+        display: block !important; /* Subtitle made visible to match screenshot 2 */
+        font-size: clamp(4.8px, 1.3vw, 7.5px) !important;
+        color: #555555 !important;
+        line-height: 1.15 !important;
+        white-space: normal !important;
+        word-break: normal !important;
     }
 
 
@@ -1470,29 +1426,53 @@ hr {
     ========================= */
 
     .last-footer {
-        width: 100%;
+        width: 100% !important;
         display: flex !important;
-        flex-direction: column-reverse !important; /* Moves badges nicely above text elements */
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-        padding: 20px 16px !important;
-        background-color: #000000 !important; /* High contrast solid color layer fill */
+        flex-direction: row !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 12px 16px !important;
+        background-color: #000000 !important;
         box-sizing: border-box !important;
+        min-height: 46px !important;
     }
 
     .copyright {
-        white-space: normal !important;
-        text-align: center;
-        font-size: 9px;
+        white-space: nowrap !important;
+        text-align: left !important;
+        font-size: clamp(7.5px, 2vw, 10px) !important;
         color: #ffffff !important;
-        letter-spacing: 0.5px;
-        opacity: 0.7;
+        letter-spacing: 0.3px !important;
+        opacity: 0.75 !important;
+    }
+
+    .payment-methods {
+        margin-left: auto !important;
+        display: flex !important;
+        align-items: center !important;
     }
 
     .payment-methods img {
-        width: 130px !important;
-        height: auto;
+        width: clamp(95px, 26vw, 135px) !important;
+        height: auto !important;
         display: block !important;
+    }
+
+    @media (max-width: 340px) {
+        .last-footer {
+            flex-direction: column-reverse !important;
+            gap: 8px !important;
+            text-align: center !important;
+            padding: 14px 10px !important;
+        }
+
+        .copyright {
+            white-space: normal !important;
+            text-align: center !important;
+        }
+
+        .payment-methods {
+            margin-left: 0 !important;
+        }
     }
 }
