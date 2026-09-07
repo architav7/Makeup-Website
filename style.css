@@ -1208,11 +1208,15 @@ hr {
         display: flex !important;
         flex-direction: column !important;
         align-items: center;
-        padding: 40px 24px !important; /* Increased padding boundaries */
+        
+        /* FIXED: Reduced top padding so it shifts directly up into the pink boundary zone */
+        padding: 10px 24px 40px 24px !important; 
         gap: 16px;
         box-sizing: border-box;
         text-align: center;
-        background-color: #fcfbf9; /* Clean canvas layout background block fill */
+        
+        /* FIXED: Changed background color to match your layout's pink container background shade */
+        background-color: #f7f4f0 !important; 
     }
 
     .newsletter-text {
@@ -1233,10 +1237,10 @@ hr {
 
     .email-box input {
         width: 100% !important;
-        height: 46px; /* Expanded for smooth target responsiveness */
+        height: 46px; 
         font-size: 13px;
         padding: 0 14px;
-        border: 1px solid #dcdcdc !important; /* Form grid outlines */
+        border: 1px solid #dcdcdc !important; 
         box-sizing: border-box !important;
         background: #ffffff !important;
     }
@@ -1249,7 +1253,7 @@ hr {
     .subscribe button {
         width: 100% !important;
         height: 46px;
-        background-color: #000000 !important; /* High contrast signature presentation formatting */
+        background-color: #000000 !important; 
         color: #ffffff !important;
         font-size: 13px;
         font-weight: bold;
@@ -1257,6 +1261,7 @@ hr {
         cursor: pointer;
         letter-spacing: 1px;
     }
+
 
     /* =========================
        FOOTER
