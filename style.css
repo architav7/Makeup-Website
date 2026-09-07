@@ -1205,6 +1205,7 @@ hr {
 
     .newsletter {
         width: 100%;
+        height: auto !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: center;
@@ -1234,6 +1235,7 @@ hr {
     .email-box {
         width: 100% !important;
         margin-left: 0 !important;
+        align-self: stretch !important;
     }
 
     .email-box input {
@@ -1249,6 +1251,7 @@ hr {
     .subscribe {
         width: 100% !important;
         margin: 4px 0 0 !important;
+        align-self: stretch !important;
     }
 
     .subscribe button {
@@ -1270,7 +1273,7 @@ hr {
 
     .footer-box {
         width: 100%;
-        margin-top: 40px !important;
+        margin-top: 0 !important;
         display: grid !important;
         grid-template-columns: 1fr 1fr !important;
         gap: 35px 25px;
@@ -1390,6 +1393,8 @@ hr {
         box-sizing: border-box;
         border-top: 1px solid #eaeaea;
         border-bottom: 1px solid #eaeaea;
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
     }
 
     .tab {
