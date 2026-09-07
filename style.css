@@ -1115,7 +1115,7 @@ hr {
         scroll-behavior: smooth !important;
         gap: 16px !important;
         
-        /* FIXED: Set to 20px so the first image has a safe buffer away from the absolute screen edge */
+        /* FIXED: Keeps space around edges to prevent title clipping */
         padding: 0 20px 35px 20px !important; 
         margin: 0 !important;
         -webkit-overflow-scrolling: touch !important;
@@ -1130,15 +1130,13 @@ hr {
         display: none !important;
     }
 
-    /* FIXED: Using direct class targeting to align properly with your HTML structure */
     .best-seller-item {
+        /* FIXED: Forces mobile browsers to respect card width instead of collapsing it */
         flex: 0 0 74vw !important;
         width: 74vw !important;
         max-width: 74vw !important;
         min-width: 74vw !important;
         scroll-snap-align: start !important;
-        
-        /* FIXED: Switched back to block display to guarantee proper image rendering bounds */
         display: block !important; 
         box-sizing: border-box !important;
         padding: 0 4px !important;
@@ -1154,9 +1152,9 @@ hr {
     }
 
     .best-seller-imgs img {
+        /* FIXED: Set min-width and block display to force mobile browsers to render the image element */
         width: 100% !important;
-        
-        /* FIXED: Reverted to generic height rules so text elements baked into images are fully preserved */
+        min-width: 100% !important;
         height: auto !important;
         display: block !important;
     }
@@ -1169,6 +1167,7 @@ hr {
     .rating {
         margin-top: 4px;
     }
+
 
 
    /* =========================
