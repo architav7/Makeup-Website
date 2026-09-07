@@ -1076,8 +1076,7 @@ hr {
         white-space: nowrap !important;
     }
 
-
-   /* =========================
+/* =========================
        BEST SELLERS
     ========================= */
 
@@ -1119,7 +1118,7 @@ hr {
     scroll-behavior: smooth !important;
     gap: 16px !important;
     
-    /* FIXED: Adjusted outer horizontal padding to 12px to stop initial clipping */
+    /* FIXED: Prevent initial text cut-off while preserving spacing */
     padding: 0 12px 35px 12px !important; 
     margin: 0 !important;
     -webkit-overflow-scrolling: touch !important;
@@ -1127,8 +1126,6 @@ hr {
     box-sizing: border-box !important;
     scrollbar-width: none !important;
     transform: none !important;
-    
-    /* CHANGE: Re-enforces layout initialization from the absolute left border track boundary */
     justify-content: flex-start !important; 
 }
 
@@ -1146,23 +1143,22 @@ hr {
     flex-grow: 0 !important;
     transform: none !important;
     scroll-snap-align: start !important;
-    display: flex !important;
-    flex-direction: column !important;
+    display: block !important; /* FIXED: Switched to block so image structures render safely */
     box-sizing: border-box !important;
     
-    /* FIXED: Increased safety padding to 16px to protect title text borders */
-    padding: 0 16px !important; 
+    /* FIXED: Safe text alignment padding */
+    padding: 0 12px !important; 
 }
 
 .best-seller-imgs p,
 .best-seller-item p {
-    white-space: normal !important; /* Replaces 'nowrap' to allow safe multi-line text flow if needed */
+    white-space: normal !important; 
     width: 100% !important;
     margin: 8px 0 4px 0 !important;
     text-align: left !important;
     box-sizing: border-box !important;
     
-    /* FIXED: Explicitly sizing down the text for narrow mobile components */
+    /* FIXED: Safe sizing for mobile text constraints */
     font-size: 14px !important;
 }
 
@@ -1174,7 +1170,7 @@ hr {
         aspect-ratio: 1 / 1 !important;
         object-fit: cover !important;
         background-color: #f7f4f0;
-        display: block;
+        display: block !important; /* FIXED: Enforced layout space rules */
     }
 
     .rating-container {
