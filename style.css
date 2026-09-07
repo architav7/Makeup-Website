@@ -1119,8 +1119,8 @@ hr {
     scroll-behavior: smooth !important;
     gap: 16px !important;
     
-    /* CHANGE: Sets uniform horizontal padding to ensure the first item isn't clipped by the viewport */
-    padding: 0 24px 35px 24px !important; 
+    /* FIXED: Adjusted outer horizontal padding to 12px to stop initial clipping */
+    padding: 0 12px 35px 12px !important; 
     margin: 0 !important;
     -webkit-overflow-scrolling: touch !important;
     scroll-snap-type: x mandatory !important;
@@ -1150,8 +1150,8 @@ hr {
     flex-direction: column !important;
     box-sizing: border-box !important;
     
-    /* ADD THIS LINE: Creates a safe layout boundary inside each card so text never cuts off */
-    padding: 0 8px !important; 
+    /* FIXED: Increased safety padding to 16px to protect title text borders */
+    padding: 0 16px !important; 
 }
 
 .best-seller-imgs p,
@@ -1161,6 +1161,9 @@ hr {
     margin: 8px 0 4px 0 !important;
     text-align: left !important;
     box-sizing: border-box !important;
+    
+    /* FIXED: Explicitly sizing down the text for narrow mobile components */
+    font-size: 14px !important;
 }
 
 
@@ -1182,7 +1185,6 @@ hr {
     .rating {
         margin-top: 4px;
     }
-
 
 
    /* =========================
