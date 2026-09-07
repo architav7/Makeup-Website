@@ -1279,6 +1279,18 @@ hr {
         letter-spacing: 1px !important;
     }
 
+        /* Paste this directly inside your existing mobile media query */
+    .newsletter, .email-box, .subscribe {
+        box-sizing: border-box !important;
+    }
+
+    .email-box input {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important; /* FIXED: Forces padding to look inside the box width bounds */
+        margin: 0 !important;
+    }
+
 
 
     /* =========================
