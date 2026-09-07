@@ -1199,68 +1199,86 @@ hr {
     }
 
 
-    /* =========================
-       NEWSLETTER
-    ========================= */
-
+       /* Paste these rules inside your existing mobile media query */
     .newsletter {
-        width: 100%;
+        width: 100% !important;
         display: flex !important;
         flex-direction: column !important;
-        align-items: center;
+        align-items: center !important;
         
-        /* FIXED: Reduced top padding so it shifts directly up into the pink boundary zone */
-        padding: 10px 24px 40px 24px !important; 
-        gap: 16px;
-        box-sizing: border-box;
-        text-align: center;
+        /* Pulls the section up into the pink box area */
+        margin-top: -65px !important; 
         
-        /* FIXED: Changed background color to match your layout's pink container background shade */
-        background-color: #f7f4f0 !important; 
+        /* Removes the white background strip gaps */
+        padding: 15px 20px 30px 20px !important; 
+        gap: 12px !important;
+        box-sizing: border-box !important;
+        background-color: transparent !important; 
+        background: transparent !important;
     }
 
     .newsletter-text {
         width: 100% !important;
+        margin: 0 !important;
     }
 
     .newsletter-text h3 {
-        font-size: 16px;
+        font-size: 15px !important;
+        margin: 0 0 4px 0 !important;
     }
 
     .newsletter-text p {
-        font-size: 10px;
+        font-size: 11px !important;
+        margin: 0 0 10px 0 !important;
     }
 
+    /* Sets the grey/beige background container box */
     .email-box {
         width: 100% !important;
+        max-width: 340px !important;
+        background-color: #f0ede9 !important; 
+        padding: 14px !important; 
+        box-sizing: border-box !important;
+        border-radius: 4px !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important; 
+        border: none !important;
     }
 
     .email-box input {
         width: 100% !important;
-        height: 46px; 
-        font-size: 13px;
-        padding: 0 14px;
+        height: 42px !important; 
+        font-size: 13px !important;
+        padding: 0 12px !important;
         border: 1px solid #dcdcdc !important; 
         box-sizing: border-box !important;
-        background: #ffffff !important;
+        background: #ffffff !important; 
+        border-radius: 2px !important;
     }
 
     .subscribe {
         width: 100% !important;
-        margin-top: 4px;
+        display: flex !important;
+        justify-content: center !important;
+        margin: 0 !important;
     }
 
+    /* Sizes down the subscribe button narrower than the input */
     .subscribe button {
-        width: 100% !important;
-        height: 46px;
+        width: 75% !important; 
+        max-width: 180px !important;
+        height: 38px !important; 
         background-color: #000000 !important; 
         color: #ffffff !important;
-        font-size: 13px;
-        font-weight: bold;
+        font-size: 12px !important;
+        font-weight: bold !important;
         border: none !important;
-        cursor: pointer;
-        letter-spacing: 1px;
+        border-radius: 2px !important;
+        cursor: pointer !important;
+        letter-spacing: 1px !important;
     }
+
 
 
     /* =========================
