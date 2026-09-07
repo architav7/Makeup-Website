@@ -1091,86 +1091,74 @@ hr {
     }
 
     .best-sellers p {
-    font-family: 'Playfair Display', 'Didot', 'Georgia', serif;
-    font-size: 34px;
-    font-weight: 400;
-    text-transform: capitalize;
-    letter-spacing: 0px;
-    line-height: 1.1;
-    color: #1a1a1a;
-    margin: 0 0 30px 0 !important;
-    display: block !important;
-    
-    /* Edit these two lines below */
-    white-space: normal !important; 
-    width: 150px !important; /* Forces the word "Sellers" onto the next line */
-    max-width: 100% !important;
-}
+        font-family: 'Playfair Display', 'Didot', 'Georgia', serif;
+        font-size: 34px;
+        font-weight: 400;
+        text-transform: capitalize;
+        letter-spacing: 0px;
+        line-height: 1.1;
+        color: #1a1a1a;
+        margin: 0 0 30px 0 !important;
+        display: block !important;
+        white-space: normal !important; 
+        width: 150px !important; 
+        max-width: 100% !important;
+    }
 
-
-  .best-seller-imgs {
-    margin-top: 15px !important; 
-    width: 100% !important;
-    display: flex !important;
-    flex-wrap: nowrap !important;
-    overflow-x: auto !important;
-    overflow-y: hidden !important;
-    scroll-behavior: smooth !important;
-    gap: 16px !important;
-    
-    /* FIXED: Prevent initial text cut-off while preserving spacing */
-    padding: 0 12px 35px 12px !important; 
-    margin: 0 !important;
-    -webkit-overflow-scrolling: touch !important;
-    scroll-snap-type: x mandatory !important;
-    box-sizing: border-box !important;
-    scrollbar-width: none !important;
-    transform: none !important;
-    justify-content: flex-start !important; 
-}
-
+    .best-seller-imgs {
+        margin-top: 15px !important; 
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        overflow-y: hidden !important;
+        scroll-behavior: smooth !important;
+        gap: 16px !important;
+        
+        /* FIXED: Set to 20px so the first image has a safe buffer away from the absolute screen edge */
+        padding: 0 20px 35px 20px !important; 
+        margin: 0 !important;
+        -webkit-overflow-scrolling: touch !important;
+        scroll-snap-type: x mandatory !important;
+        box-sizing: border-box !important;
+        scrollbar-width: none !important;
+        transform: none !important;
+        justify-content: flex-start !important; 
+    }
 
     .best-seller-imgs::-webkit-scrollbar {
         display: none !important;
     }
 
-.best-seller-imgs > * {
-    flex: 0 0 76vw !important;
-    width: 76vw !important;
-    max-width: 76vw !important;
-    min-width: 76vw !important;
-    flex-shrink: 0 !important;
-    flex-grow: 0 !important;
-    transform: none !important;
-    scroll-snap-align: start !important;
-    display: block !important; /* FIXED: Switched to block so image structures render safely */
-    box-sizing: border-box !important;
-    
-    /* FIXED: Safe text alignment padding */
-    padding: 0 12px !important; 
-}
+    /* FIXED: Using direct class targeting to align properly with your HTML structure */
+    .best-seller-item {
+        flex: 0 0 74vw !important;
+        width: 74vw !important;
+        max-width: 74vw !important;
+        min-width: 74vw !important;
+        scroll-snap-align: start !important;
+        
+        /* FIXED: Switched back to block display to guarantee proper image rendering bounds */
+        display: block !important; 
+        box-sizing: border-box !important;
+        padding: 0 4px !important;
+    }
 
-.best-seller-imgs p,
-.best-seller-item p {
-    white-space: normal !important; 
-    width: 100% !important;
-    margin: 8px 0 4px 0 !important;
-    text-align: left !important;
-    box-sizing: border-box !important;
-    
-    /* FIXED: Safe sizing for mobile text constraints */
-    font-size: 14px !important;
-}
-
-
+    .best-seller-imgs p,
+    .best-seller-item p {
+        white-space: normal !important; 
+        width: 100% !important;
+        margin: 8px 0 4px 0 !important;
+        text-align: left !important;
+        box-sizing: border-box !important;
+    }
 
     .best-seller-imgs img {
         width: 100% !important;
+        
+        /* FIXED: Reverted to generic height rules so text elements baked into images are fully preserved */
         height: auto !important;
-        aspect-ratio: 1 / 1 !important;
-        object-fit: cover !important;
-        background-color: #f7f4f0;
-        display: block !important; /* FIXED: Enforced layout space rules */
+        display: block !important;
     }
 
     .rating-container {
