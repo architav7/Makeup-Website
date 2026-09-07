@@ -1304,10 +1304,12 @@ hr {
         font-weight: bold;
         letter-spacing: 3px;
         color: #000000;
+        padding-top: 0 !important;
         padding-left: 0 !important;
         display: flex !important;
         flex-direction: column !important;
         align-items: flex-start !important;
+        text-align: left !important;
         margin-bottom: 12px !important;
     }
 
@@ -1318,6 +1320,7 @@ hr {
         color: #000000;
         margin-top: 4px;
         margin-left: 0 !important;
+        text-align: left !important;
     }
 
     .brand-description {
