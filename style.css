@@ -102,6 +102,7 @@ body {
     width: 25px;
     height: 25px;
     object-fit: contain;
+    filter: brightness(0);
 }
 
 .background-img {
