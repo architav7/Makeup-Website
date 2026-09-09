@@ -41,6 +41,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 10px 30px;
+    position: relative;
 }
 
 .glamora {
@@ -57,9 +58,10 @@ body {
     display: block;
     font-size: 10px;
     letter-spacing: 4px;
-}
     width: 100%;
 }
+   
+
 
 .nav-bar {
     display: flex;
@@ -90,6 +92,10 @@ body {
     display: flex;
     align-items: center;
     gap: 18px;
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .icons img {
