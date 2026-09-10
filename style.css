@@ -241,10 +241,11 @@ body {
     font-weight: bold;
     color: black;
     font-size: 20px;
+    margin-top: 30px;
 }
 
 .category-images {
-    margin-top: 30px;
+    
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
