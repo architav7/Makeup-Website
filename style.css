@@ -282,6 +282,8 @@ body {
     text-align: center;
     display: block !important;
     box-sizing: border-box !important;
+    position: relative;
+    left: -20px;
 }
 
 
