@@ -16,6 +16,7 @@ body {
     display: flex;
     background-color: #f7d8d6;
     justify-content: space-between;
+    border-bottom: 2px solid #a9133b;
 }
 
 .free-shipping {
